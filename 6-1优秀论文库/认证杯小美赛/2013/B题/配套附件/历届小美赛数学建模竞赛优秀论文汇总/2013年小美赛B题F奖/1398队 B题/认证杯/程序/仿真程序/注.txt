@@ -1,0 +1,6 @@
+adaptPeople.m 产生一个部门 的人员情况。
+abilityChange.m 每运行一次能力按一年提升
+updateWork.m 一年后由于退休工作更新
+needAdd.m 部门增加新工作产生的工作更新
+fun.m 根据工作级别与能力调工作函数
+wsNet.m 产生接触矩阵

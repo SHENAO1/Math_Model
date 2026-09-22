@@ -1,0 +1,733 @@
+\documentclass[12pt]{article}
+\topmargin -1cm  \textwidth=15.5cm \textheight=23.5cm
+\oddsidemargin=-0.2cm
+\renewcommand\topfraction{}
+\renewcommand\bottomfraction{}
+\renewcommand\textfraction{0.0}
+\renewcommand\baselinestretch{1}
+\usepackage{amsmath,amssymb,amsthm,amsfonts}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{caption}\captionsetup{justification=centering}
+\usepackage[scriptsize,nooneline]{subfigure}
+\usepackage{indentfirst}
+\usepackage{cite}
+\usepackage{color}
+\usepackage{fancyhdr}
+\def\red{\color{red}}
+\def\blue{\color{blue}}
+\usepackage{epstopdf}
+\usepackage{pdfpages}
+\usepackage{setspace}
+\usepackage[labelfont=footnotesize,font=footnotesize]{caption}
+\def\disp{\displaystyle}
+\newcommand{\R}{{\mathbb R}}
+\newcommand{\diff}{\mathrm{d}}
+\newcommand{\etal}{\textit{et al.~}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem{lemma}{Lemma}
+\newtheorem{claim}{Claim}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{definition}{Definition}
+\newtheorem{example}{Example}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+\setlength{\abovecaptionskip}{0pt}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\pagestyle{fancy} %fancyhdr宏包新增的页面风格
+\fancyhf{}
+\rhead{Page \thepage\ of \pageref{LastPage}}%当前页  of 总页数
+\lhead{Team \quad \#2326}
+
+\begin{document}
+\begin{spacing}{1.5}
+\includepdf{page1.pdf}
+\newpage
+\includepdf{page2.pdf}
+\begin{center}
+
+{\noindent{\bf \large {The Design of Seat Back Curve Based on Nonlinear Programming and Smoothing}}}
+\end{center}
+\baselineskip 20pt
+\begin{center}
+{\noindent{\bf Abstract}}
+\end{center}
+
+
+ People have begun to convert their mind in choosing a way of moving as living standard rising, and the people to go abroad have increased rapidly as the trend of economic globalization,have brought great pressure to airlines to increase their capacity to meet the transport demand, so the slimline seats on the airplane emerge at the historic moment. It is because that the people have begun to consider making the comfort on the body and mind as the primary as nowadays, $'$humanization$'$ should be put on a great attention so that he airline can triumph in the $'$space war$'$ whichever can does well in designing the most comfortable seat back even though it has a thinner backplate and less padding.So how to design a seat back curve to increase the comfort of slimline seats is a problem need to be solved urgently.
+%由于人与人之间的脊椎情况并不完全相同，这与年龄、性别、种族等等因素有关，故本文将问题考虑重点放在座椅曲线的设计方法上，并未采集大量数据进行处理。本文通过C++程序编写，从普通正常人体的脊椎图像上提取点并将其坐标化和数字化，以此作为数据点。通过分析找到一种较优的曲线拟合方式使得所拟合出来的曲线更加否合人体脊椎的生理曲线。本文通过分析研究发现用最小二乘的思想所拟合出来的高斯曲线更加与人体的脊椎生理曲线相吻合，故给出了高斯曲线拟合模型。随后，本文对休息时人体坐姿进行了抽象化，结合生物工程学对其进行理论分析，得到了个受力点并对其进行了受力分析。再根据查阅资料所得信息进行综合给出了一个非线性最优化模型，利用进行编程运算，得到了受力点的位置信息，利用高斯曲线拟合模型对其进行曲线拟合，并对其进行平滑优化，保证这5个点分别对应为曲线仅有的极大（小）值点，以此曲线作为人在自然弯曲状态下的脊椎曲线，故与此相贴合的座椅靠背曲线便是让人感觉最舒适的。
+
+The interpersonal spines are different in the modalities, it is related to so many factors, in this thesis we will focus on the design method of seat back curve, not collect a large amount of data to process. Through the analysis of studies, we found that the curve fitted by the least squares Gauss curve fitting method is in conformity with the physiological curve of spine, so we bring out the Gauss curve fitting model. And then, introduces the abstraction of body posture in resting, carries on the theoretical analysis combined with biological engineering and receives five stress points and analyses them. According to the information, we gives a nonlinear optimization model and uses Lingo 14.0 to calculate, obtains the location information of the stress points, using Gauss curve fitting model for curve fitting, and carries on the smooth optimization to ensure the five points are the sole extremum points of the curve corresponding, this curve is been considered as a man$^{'}$s spinal curve in the condition of nature, at the same time, the joint curve is the best seat back curve to let a person feel more comfortable.
+
+%由于非线性最优化模型中的受力点的选取方式比较粗略，故本文考虑对其进行进一步优化，提出了基于体压分布来进行考虑的优化模型，在这一模型中，对最大压力、平均压力、最大压力梯度、平均压力梯度、不对称系数、纵向压力分布曲线、纵向力矩分布曲线及舒适性系数个指标进行刻画，通过压力传感技术对不同坐姿（在一定范围内）所引起的压强变化进行动态监测得到大量的实验数据，然后对这些数据进行统计及处理分析，找到舒适度达到较优时脊椎各部分所对应的压强波动范围，在时间序列法的理念基础上对其进行修改，得到脊椎各部分所受压力随靠背角度变化而产生的变化情况的模型，进而对其进行分析预测，结合舒适度评价模型，找到靠背在可调整角度范围内变化时舒适度达到最高的靠背倾角以及此时人体的体压分布情况，将其数字化后便可得到此时人体脊椎受压分布情况，反推得到贴合这一脊椎的座椅靠背曲线。
+Due to the method of the stress point in the nonlinear optimization model system is sketchy, this thesis considers carrying on a further optimization, so we bring out a new optimization model based on body pressure distribution. In this model, we define 8 indexes to discuss. If the condition permitted we can obtain a lot of data caused by pressure change on different posture(within a certain range) dynamically by the use of the pressure sensor technology, make statistics and analysis, and then find a pressure range in which comfort level can achieve a higher point. After that, making some modification on the basis of the concept of time series method, get pressure data with the change of the angle between the seat back and seat  of each part of spine resulting in the model, and then analyzes and predicts in combination with comfort evaluation model, find out the angle of seat backplate that comfort level can achieve a high place within the scope of the adjustable angle as well as the human body pressure distribution, at this time, the pressure distribution on human$^{'}$s spine can be got after its digital, push reversely to get the seat back curve jointed better with the modality of spine.
+
+%由于时间和技术限制的原因，本文所提出的综合模型没有时间和数据进行具体操作实验，只提出了基本思想，但由文献  可以保证此种想法具有可实施性，在条件允许的前提下可以得到较优的结果，并且可以通过结合有限元的思想用Matlab实现人工智能模拟。
+Because of time and technical limitations, the comprehensive model this thesis proposed only be put forward the basic thoughts, but this model is practical which can be inferred from the literature. Simulation of artificial intelligence perhaps can be realized if this model can be blended in the idea of finite element method. Thus, it is the task we are likely to attempt.
+\\
+\\
+{\bf Key words:}  Set back curve ; Ergonomics ;  Least-squares fitting ; nonlinear programming ; Body pressure distribution 
+
+
+\newpage
+
+\tableofcontents
+\newpage
+
+\newpage
+\section{Introduction}
+
+%随着社会的发展和科学技术的进步，航空业的发展已经达到了一个空前繁荣的时期。随着人们生活水平的提高，越来越多的人考虑飞机出行快捷方便，经济舱价格比较合理，想要乘飞机出行，此外，经济全球化的发展预示着国家与国家之间的联系越来越紧密、交流越来越多，这种现象导致在全球范围内的国际航班数目呈明显上升的趋势，乘坐国际航班人数的快速增长，无疑也对航空运输带来了巨大的压力。鉴于一味地增加航班并不现实，故可以考虑提高飞机的载客率。
+
+ The development of the airlines has reached an unprecedented period of prosperity with the development of society and the progress of science and technology. Along with the improvement of people$^{'}$s standard of living, more and more people are likely to have a trip by air because of its convenience and swiftness, and the price of economy class is not so high. What$^{'}$s more, the evolution of economic globalization indicates that the contact among the states is becoming more and more closely, and the communication is increasing. This phenomenon shows an upward trend in the number of international flights, and the rapid growth of the number of the passengers who choose to take flight also puts a great pressure on the aviation transportation undoubtedly. In view of the fact that increases the number of the flight constantly is unrealistic, so it can be considered to improve the capacity of airlines.
+%要在飞机原有空间下提高载客量又要保证每位乘客落座后的可移动空间并无显著减少，改变座椅的原有结构并降低座椅的厚度是解决此类问题的一个重要举措。这种改造以后的座椅虽然质量变轻了，理论上也可以满足飞机增加载客量的能力，但一经投入使用便收到了各地人们的不满，其原因在于改造后的座椅背面板比较薄、填充料太少，乘客坐上去感觉很不舒服。
+
+In order to increase the plane$^{'}s$ capacity and keep passenger$^{'}$s moveable space does not decreased, most airlines choose to install a new type of seat for their planes, called slimline seat, to replace the old type. This kind of seat have new structure and covered by more slight fabric. This new seat is more light than the old and indeed increases the capacity of plane. However, it also rouses the complain all over the world. People feel very uncomfortable when sitting on it because of its thin backplate and little padding.
+
+%我们都知道，在近期飞机出事事件频发，虽然越来越多的人们想要乘飞机出行，但考虑到乘坐飞机的安全性，一部分人可能会开始犹豫是否要选择飞机出行，如果在这种情况之下飞机的座椅还并不能让乘客感觉到舒适，那么这些犹豫不决的乘客会有可能会选择换种方式出行。当今社会一直在倡导服务要“人性化”，所以人们会更加关注座椅舒适度这一问题，这样一来，不舒适的超薄座椅便会成为众矢之的，或许乘客会开始抱怨航空公司是否是因为经济舱票价较低而忽略他们给他们提供了过于不好的待遇，这样航空业的发展肯定会开始陷入危机，毕竟乘坐经济舱的乘客是他们的主要客源。
+ As we all know, the past few months have seen several flying accidents. Though more and more people like to go out by plane, some people may hesitate whether to choose it considering the question of safety. In this case, if the seats cannot meet the comfortableness of the seat will receive more attention. As a result, the uncomfortable and thin seats will become the receiving end. Maybe passengers may wonder whether it is because the low price of Economy class that the airlines ignore the needs of passengers and provide to then less better services. Thus the aviation industry will get into crisis. After all, the passengers who take economy class are their major passenger sources.
+
+
+%综合上述说法可以发现，飞机经济舱座椅舒适度的问题亟待解决，如何设计出符合人机工程学要求的座椅是航空服务业今后发展所必须解决的一个问题。
+To sum up,the comfortableness of passengers$^{’}$ seats is really a problem urgently to be solved. How to design a good seat that can meet the requirements of the human-machine engineering is a problem that the aviation industry is now facing.
+
+
+
+ Under the condition of having related spinal data, through the analysis to find a relatively optimal curve fitting method to make the curve that fitted out by this method can match the physiological curve of most human$^{'}$s pines.
+
+
+\section{The Description of Problem}
+
+An airline seat is a seat on an airliner in which passengers are accommodated for the duration of the journey. Some airlines are now introducing new $'$slimline$'$ seats in economy class. These seats,in addition to weighing less, theoretically allow airlines to increase capacity without significantly affecting passenger comfort. These seats may or may not feature moveable headrests, and generally do not feature adjustable lumbar support. Slimline seats are being further refined, liberating more passenger space. The common point of them is a thinner backplate and less padding. However, many passengers have expressed displeasure with these seats.
+
+{\bf Task 1:} Without changing the structure of the premise, how to design seat back curve, in order to make the seat more comfortable?
+
+%针对这一问题，因为时间有限我们并不能获取大量的不同人体的脊椎有关数据，故本文考虑将重点放在方法的提出上，所需数据我们选择通过编写程序将人体脊椎图像数字化并坐标化。
+In order to solve this problem, we can not get a lot of data of different human spine because of the limited time. Therefore, this paper consider focusing on method of put forward.What${'}$s more, we find the required data by writing C program which can make the human body vertebra image digitization and coordinated.
+
+
+$\bullet$%随机抽取得到一个点列，对其进行多种曲线拟合，得出自然状态下人的脊椎曲线，将这些曲线与人的脊椎图像放在同一图像下，判断哪种拟合方式更加合适。
+We randomly pick some points from human spine picture to make a scatter diagram. Next we choose some different curve to fit the scatter diagram. So we get some approximate human spine curve in natural condition. Then we compare these curves with human spine image to pick a better curve preliminarily.
+
+$\bullet$%对人体脊椎构造进行抽象分析，找到受力点分别对其进行受力分析，根据对已有文献的分析找到问题所需参数的取值及变量的取值范围，建立非线性优化模型找出受力点，再将其进行坐标化得到受力点的位置坐标。利用上一步骤中所选取的较优的函数拟合类型对其进行拟合，得到我们想要的座椅靠背曲线。
+By abstracting analysis on the human body vertebra structures, we have found points respectively on the force analysis, based on the analysis of the existed literature to find the values of parameters which are required and the scope of variables, and nonlinear optimization model is established to find points, then find the coordinates of the stress point according to make them coordinate. Now we can take advantage of the  former step in the selection of the optimal function fitting types on the fitting to get the seat backrest curve which we expect.
+
+{\bf Task 2:} How to optimize the seat backplate curve and padding, in order to make the seat more comfortable, without changing the main internal structure?
+
+%针对这个问题我们将在上述非线性优化模型下对其进行进一步的优化，由于我们在上述模型中对其进行的是受力点的粗略估计及受力分析，在这一过程中必然会出现较大的误差，故在此阶段我们考虑运用压力传感技术得到不同坐姿的体压分布情况，通过软件分析得到最舒适座椅靠背曲线并用神经网络方法给出评价。
+ To solve this problem preferably, we further optimize the model above. In this present model, we just calculate the approximate index of force bearing points and do the rough force analysis, so the error will be dissatisfactory. To minimize the error, we use pressure sensing technology to get seat$^{’}$s pressure distributions of different human sitting posture. And then, we code program to analyze these pressure data. Next, using these data to optimize our curve model. At the end, we build a neural network to evaluate our curve model.
+%问题解决的整体流程图，见图一
+The overall flow chart to solve the problem, as shown in figure 1.
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.4]{pictureone.PNG}
+ \caption{Generate the backrest curve diagram }
+\end{figure}
+
+
+In addition to the above-described problems, this thesis will give an advertising material for the airline to describe our design features and advantages concisely in the same time.
+
+
+
+\section{Models}
+
+\subsection{Description of Models}说明
+
+\subsubsection{Terms in the Thesis}
+
+%人体脊椎
+{\bf Human spine :} Human spine is composed of 33 vertebrae (12 pieces of cervical vertebra, 7 pieces of thoracic vertebra, 5 pieces of lumbar vertebra , and sacrum and coccyx which are totally 9 pieces) that are combined with joint, ligaments and intervertebral disc. Spine is upper supported by skull, bottom supported by hip, in the central attached by ribs, and as the back wall of thorax and abdominal and pelvic cavity. Spine has the function of supporting the trunk, protecting  viscera, protecting  cord  and   conducting movement. As shown in figure 2.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.5]{picturetwo.JPG}
+ \caption{The human body vertebra}
+\end{figure}
+
+
+%人机工程学
+{\bf Ergonomics :} So-called ergonomics, which is the research method of such subjects as anthropometry, human body mechanics, physiology of labor, labor  psychology, studies on the human body structure characteristic and the function characteristic, provides such human body structure characteristic parameters as the size, weight, surface area, specific gravity, center of gravity of each part of human body, and the relationship and moving range of each part  of the human body in the activity . Also it provides such characteristic parameters as the range of output, and the habits on the movement of each part of human body the function of the body, analysis functional characteristics of sensory organs , such as human visual, hearing, touch, skin sensation; It analysis a variety of physiological changes, energy consumption, fatigue mechanism and people$^{'}$s ability to adapt to all kinds of labor load when people are at work. It  discusses the factors that affect mental state at work and the influence of psychological factors on the efficiency and so on.
+
+ %人工神经网络
+{\bf Artificial Neural Networks :} Artificial Neural network (abbreviation for ANNs) which is called short for Neural Networks (NNs) or  Connection Model, it is a kind of algorithm mathematical Model of imitation on animal Neural network behavior characteristics, do information processing with distributed parallel. The network depends on the complexity of the system, by adjusting the internal relations between a large number of nodes connected, so as to achieve the purpose of information  processing. The working principle of the abstraction is shown as figure 3.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.6]{picturethree.PNG}
+ \caption{The Working Principle of Artificial Neural Networks }
+\end{figure}
+
+%传感技术  获取信息靠各类传感器，它们有各种物理量、化学量或生物量的传感器。按照信息论的凸性定理，传感器的功能与品质决定了传感系统获取自然信息的信息量和信息质量，是高品质传感技术系统的构造第一个关键。信息处理包括信号的预处理、后置处理、特征提取与选择等。识别的主要任务是对经过处理信息进行辨识与分类。它利用被识别（或诊断）对象与特征信息间的关联关系模型对输入的特征信息集进行辨识、比较、分类和判断。
+{\bf Sensing Technology :} To obtain information on various types of sensors, they have a variety of physical, chemical or biomass of sensors. According to the convex theorem of information theory, the function of the sensor and quality determines the amount of information and information quality of natural information acquired from information sensing system, is the first key to the structure of high quality sensing technology system. Information processing includes signal preprocessing, post processing, feature extraction and selection, etc. Identification and classification is the main task of the processed information for Recognition. It uses the relationship model between recognized(or) diagnosed objects and the characteristic information  and do identification, comparison, classification, and judgment to input feature information.
+
+
+%最小二乘法：
+{\bf Least Squares :}Least squares method (also known as the least square method) is a kind of mathematical optimization techniques. Its data by minimizing the error sum of squares to find the best match function. Can be easily obtained by means of least square method of the unknown data, and make the the sum of the squares of the error between actual data and calculated data to a minimum. The least square method can also be used for curve fitting. Other optimization problems can also be used by minimizing or maximizing entropy energy use least square method to express.
+
+
+%曲线拟合 曲线拟合是指选择适当的曲线类型来拟合观测数据，并用拟合的曲线方程分析两变量间的关系。
+{\bf Curve fitting :}Curve fitting refers to choose the appropriate type of curve to fitting the observed data, and the fitting curve equation analysis of the relationship between the two variables.
+
+
+
+\subsubsection{Assumption of Models }
+
+假设座椅框架刚性满足要求
+$\ast$ Assuming that the rigidity of the seat frame can meets the requirements;
+
+不考虑座椅坐垫部分，仅考虑座椅背部曲线所带来的舒适度改变
+$\ast$ Regardless of the seat cushion, seat back curve is only considered comfort brought by the change;
+
+不考虑选材造价问题
+$\ast$ Don$^{'}$t consider the cost of materials.
+
+
+
+
+
+\subsubsection{Symbols of Models}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{cl}
+\hline
+{Symbol}&  Description \\
+\hline
+$\theta$&Tilt angle of seat back\\座椅靠背倾斜角
+
+ $H$& Backrest height  \\
+
+ $L$& The distance between two seats\\
+
+\hline
+\end{tabular}
+
+\end{table}
+
+\subsection{The Foundation of Seat Back Curve Model}
+
+%由于时间问题我们并不能获取不同年龄阶段不同性别不同国籍不同种族的人体脊椎自然状态下的有关数据，但考虑到飞机座椅是针对大多数正常人体所设计的，故本文考虑从普通正常人体的脊椎图像上提取数据点。首先我们利用C++进行程序编写，通过脊椎图像灰度值的不同进行一系列转化操作，藉以实现数据点的提取。之后，将这些数据点置于坐标系之下进行坐标化和数字化，得到人体脊椎曲线上的一个点列，将这些点作为我们接下来所建模型的已知数据点。
+
+As a matter of time,  we can not get the data of human spine about different age stages, sexes , nationalities and races under natural state. Because airplane seats are designed for most of the normal human body, this paper extracts data points from ordinary normal spinal image of the body. In the first place, we use C++ programming . According to a series of transformations based on the differences of the spine image grey value, we achieve the extraction of data points. Then, by making these data points coordinated and digitization under coordinate system, we can get a point column from the curve of the human body vertebra. These points are used in the model we build the next as the known data points.
+
+\subsubsection{Gauss Curve Fitting Model}
+
+Given these data of points : $\{ x_{i},y_{i}\}$, here $y_{i}=f{x_{i}}(i=0,...,m)$, to find a function $y=S^{*}(x)$ with the given data ${(x_{i},y_{i}),i=0,1,...,m}$ fitting, 若记误差If define the error is
+$\delta_{i}=S^{*}(x_{i})-y_{i}(i=0,1,...,m), \delta=(\delta_{0},\delta{1},...,\delta_{m})^{T}$, Set $\varphi_{0}(x),\varphi_{1}(x),...,\varphi_{n}(x)$ is the linearly independent functions on $C[a,b]$,在中找一个函数find a function $S^{*}(x)$ in $\varphi$=span$\{\varphi_{0}(x),\varphi_{1}(x),...,\varphi_{n}(x)\}$ 使误差平方和to minimize the error sum of squares.
+
+\begin{eqnarray}
+\| \delta \|_{2}^{2}=\sum\limits_{i=0}^{m}\omega(x_{i})\delta_{i}^{2}=\sum\limits_{i=0}^{m}\omega(x_{i})[S^{*}(x_{i})-y_{i}]^{2}=\min_{S(x)\in\varphi}\sum\limits_{i=0}^{m}\omega(x_{i})[S(x_{i}-y_{i})]^{2}
+\end{eqnarray}
+
+In the above type $\omega(x)\geq0$ is the weight function on $[a,b]$ 上的权函数,它表示不同点it stands the differences in the proportion of different data $(x_{i},f(x_{i}))$ ,并且这里and here ,
+\begin{eqnarray}
+S(x)=a_{0}\varphi_{0}+a_{1}\varphi_{1}+...+a_{n}\varphi_{n}\ \ (n<m)
+\end{eqnarray}
+
+%%用最小二乘法求拟合曲线的问题，就是在形如(2)式的$S(x)$中求一函数$y=S^{*}(x)$,使(1)式取得最小.它转化为求多元函数
+Using least square method for fitting curve of the problem, is in the form such as (2) in the $S(x)$ for a function $y = S ^ {*} (x) $, to gain the minimum of (1). It is transformed into the problem of finding out the minimum point $(a_{0}^{*},a_{1}^{*},..,a_{n}^{*})$ of the function with many variables.
+
+\begin{eqnarray}
+I(a_{0},a_{1},...,a_{n})=\sum\limits_{i=0}^{m}\omega(x_{i})[\sum\limits_{j=0}^{n}a_{j}\varphi_{j}(x_{i})-f(x_{i})]^{2}
+\end{eqnarray}
+
+%由求多元函数极值的必要条件，有
+By the necessary conditions of multivariate function extreme value, there is
+\begin{eqnarray}
+\frac{\partial I}{\partial a_{k}}=2\sum\limits_{i=0}^{m}\omega(x_{i})[\sum\limits_{j=0}^{n}a_{j}\varphi_{j}(x_{i})-f(x_{i})]\varphi_{k}(x_{i})=0,\ k=0,1,...,n
+\end{eqnarray}
+%记
+Defines that
+
+$$
+(\varphi_{j},\varphi_{k})=\sum\limits_{i=0}^{m}\omega(x_{i})\varphi_{j}(x_{i})\varphi_{k}(x_{i}),
+$$
+$$(f,\varphi_{k})=\sum\limits_{i=0}^{m}\omega(x_{i})f(x_{i})\varphi_{k}(x_{i})\equiv d_{k},\ k=0,1,...,n,$$
+%故
+So\begin{eqnarray}
+(\varphi_{k},\varphi_{j})a_{j}=d_{k},\ k=0,1,...,n.
+\end{eqnarray}
+
+上式可以写为矩阵形式
+The type can be written as a matrix form
+\begin{eqnarray}
+{\bf Ga}={\bf d},
+\end{eqnarray}
+
+其中Here $$ {\bf a}=(a_{0},a_{1},...,a_{n})^{T},\ \ {\bf d}=(d_{0},d_{1},...,d_{n})^{T}$$,
+
+
+\begin{equation}       %开始数学环境
+{\bf G}=\left(                 %左括号
+  \begin{array}{cccc}   %该矩阵一共3列，每一列都居中放置
+    (\varphi_{0},\varphi_{0}) & (\varphi_{0},\varphi_{1})&\ldots & (\varphi_{0},\varphi_{n})\\  %第一行元素
+    (\varphi_{1},\varphi_{0}) & (\varphi_{1},\varphi_{1})&\ldots & (\varphi_{1},\varphi_{n})\\
+    \vdots&\vdots& &\vdots\\
+    (\varphi_{n},\varphi_{0}) & (\varphi_{n},\varphi_{1})&\ldots & (\varphi_{n},\varphi_{n})\\
+  \end{array}
+\right)                 %右括号
+\end{equation}
+
+%上述为最小二乘法的基本原理及求解方法，将其应用于高斯函数
+
+The above as the basic principle of least square method and solution method[1], applied to the gauss function $f(x)=ae^{(-Cx^{2})}$ , through matlab to calculate the fitting function
+
+$f_{1}(x)=a_{1}e^{-((x-b_{1})/c_{1})^{2}} + a_{2}e^{-((x-b_{2})/c_{2})^{2}}+a_{3}e^{-((x-b_{3})/c_{3})^{2}} + a_{4}e^{-((x-b_{4})/c_{4})^{2}}$
+
+here,$a_{1} = 10.98,b_{1} = 47.44,c_{1} = 39.59,a_{2} = -4.721,b_{2} = 677.2,c_{2} = 91.87,a_{3} = -26.19,b_{3} = 199.2,c_{3} = 205.1,a_{4} = 33.53,b_{4} = 129.3,c_{4} = 593.2$
+
+%为清楚地呈现出基于最小二乘法的高斯拟合函数的优点，我们给出了两种普通的多项式插值拟合函数
+To clearly present the gauss function fitting based on least square method, the advantages of we propose two ordinary polynomial interpolation function
+
+%四次插值多项式：
+Four interpolation polynomial:
+
+$$f_{2}(x)=\alpha_{4}x^{4} + \alpha_{3}x^{3} + \alpha_{2}x^{2} + \alpha_{1}x + \alpha_{0}$$
+
+here
+$\alpha_{4}= 1.268\times10^{-9},\alpha_{3}= -2.48\times10^{-6},\alpha_{2}= 0.001593,\alpha_{1} = -0.3737,\alpha_{0} = 37.2$
+
+%六次插值多项式：
+Six time interpolation polynomial: 
+$$
+f_{3}(x) =\beta_{6}x^{6} + \beta_{5}x^{5} + \beta_{4}x^{4} + \beta_{3}x^{3} + \beta_{2}x^{2} + \beta_{1}x + \beta_{0};
+$$
+$\beta_{6}= -1.521\times 10^{-14},\beta_{5} = 4.038\times 10^{-11},\beta_{4}= -3.966\times 10^{-8},\beta_{3} = 1.718\times 10^{-5},\beta_{2} = -0.002888,\beta_{1} = 0.04139,\beta_{0} = 27.87$
+
+%为使对比更加直观，我们将拟合所得曲线与人类脊椎图像放置在同一画面之下，见图四。
+
+To make the comparison more intuitive, we place the fitting curve with the human spine image under the same picture, as shown in figure 4 ($\uppercase\expandafter{\romannumeral1}$:the curve of four interpolation polynomial,\ $\uppercase\expandafter{\romannumeral2}$:the curve of gauss function fitting, \ $\uppercase\expandafter{\romannumeral3}$:the curve of six interpolation polynomial).
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.5]{picturefive.PNG}\
+\includegraphics[scale=0.5]{picturefour.PNG}\ \
+\includegraphics[scale=0.5]{picturesix.PNG}
+ \caption{Different curve fittings }
+\end{figure}
+
+%由图像可以看出基于最小二乘法下的高斯拟合曲线更加贴合人类脊椎的样态。
+
+It can be seen by the image that the gauss curve based on the least square method [2] fitting more relevant with human$^{s}$ spine.
+
+
+
+\subsubsection{Nonlinear Programming Model}非线性规划模型
+ 
+%考虑到我们所要设计的是飞机经济舱的座椅靠背曲线，站在乘客的角度来说他们希望得到的是一个舒适的可以休息的座椅，但鉴于经济舱座椅较多，每位乘客所被分配到的空间比较狭小，所以靠背的调整只能在一个较小的范围内进行，所以我们需要找到在此范围内大多数人认为比较舒适的一个座椅靠背倾角，并在此倾角下分析得到人的脊椎曲线，进而找到与此贴合的曲线，依照这一曲线设计出来的座椅靠背曲线理论上应该是最好的。
+
+Considering the design that we want is a plane curve of economy class seat. Standing on the passenger$^{'}$s point of view, what they want is a comfortable chair to rest. But for the economy class seat is more,  the space assigned for each passenger is narrow, so the adjustment of the back of a chair can only be on a small scale. Therefore, within the scope of it , we need to find a seat backrest angle which most people think is comfortable. Under the tilt angle, we analyze the spinal curve and find the curve of joint. As a result, the backrest curve based on the curve of joint should be the best in theory.
+
+%我们首要任务是找到人的脊椎在一个较小变化范围内所受压力的变化情况。通过分析已有文献发现人在保持坐姿的情况下，容易感到疼痛或者已有疲劳感的部位有五个，因此我们将保持坐姿下的人的脊椎进行抽象化（见图五），并将易感到疼痛的五个部位抽象为五个脊椎受力点。我们想要找到在座椅靠背倾角只能进行小范围调整的状况下，人的舒适感便可以通过各个脊椎受力点所受压力进行刻画，当各个受力点所受压力达到相对较低时所对应的脊椎曲线便是我们所想设计出的座椅靠背曲线。
+It$^{'}$s our primary task to find the human pine${'}$s pressure changes in small ranges. We find that people  keeping sitting position  is easy to feel exhausted in five body$^{'}$s positions  by analysing the existing literature[3]. So we will keep sitting under the abstraction of the spine(see figure 5), and will abstract five parts that people are easy to feel painful to  five spinal stress points. We want to find that human comfort can be described by all the pressure on the spinal stress points only the backrest angle adjustment under the condition of a small scale, when the pressure on the each stress point reach a relatively low level, the spine curve is that we want to design backrest curve.
+\begin{figure}[h]
+\centering
+\includegraphics[scale=1.2]{pictureseven.PNG}
+ \caption{Sitting under the spine abstract sketch }坐姿下脊椎抽象示意图
+\end{figure}
+
+%反推法：由于我们想要得到的是座椅靠背曲线，即我们要得到人在座椅靠背倾角变化范围有限的情况下找到所受压力相对较小时所对应的脊椎曲线。由于这个曲线并不能直接获得，故本文考虑先确定受力点的位置，又因为高斯曲线拟合模型中我们得到了一种可以近似拟合人类脊椎曲线的拟合方法，所以我们可以结合高斯曲线拟合模型得到此时的脊椎曲线。具体分析见下文。
+
+Backstepping method : because we want to get a seat back curve, namely we are going to get the homologous spinal curve when the pressure by people felt in the backrest angle range that is limited to find the relatively minimum pressure for spinal curve. Because the curve can$^{'}$t be directed get, this paper considered to determine the location of the stress points, and because in the gaussian curve fitting model we can get a kind of approximate fitting human spine curve fitting method, we can combine gauss curve fitting model for spinal curve at this time. Please see the following specific analysis.
+
+
+%对抽象后的人在保持坐姿情况下的脊椎抽象图（即图五）进行分析：
+Analysis of the abstract of the abstract figure(figure five) in the case of keep sitting :
+
+Respectively analysing on spine points A, B, C, D, E stress analysis(provisions to the right and upward force is positive), considering giving a function  on the spine mainly affected by the rallying point of stress ,and we found that fatigue degree ranking : B$>$E$>$A$>$D$>$C through the relevant data access, so different points are given the corresponding weight in order to get the objective function considering
+
+%分别对脊椎受力点A, B, C, D, E进行受力分析（规定向右、向上的力为正），考虑给出一个关于脊椎上主要受力点所受压力的函数，通过相关资料的查阅我们发现疲劳度排名为：B$>$E$>$A$>$D$>$C，故给不同受力点加以相应的权重，得到目标函数
+
+\begin{eqnarray*}
+min= \sum\limits_{i=1}^5C_{i}Z_{i}+C_{i}F_{i}
+\end{eqnarray*}
+Here
+\begin{eqnarray*}
+&Z_{1}=d sin\gamma_{2}+c sin\gamma_{1}+b sin\beta_{1}+a sin\alpha_{1}\\
+&F_{1}=d cos\gamma_{2}-c cos\gamma_{1}+b cos\beta_{1}-a cos\alpha_{1}\\
+&Z_{2}=c sin\gamma_{1}+b sin\beta_{1}+a sin\alpha_{1}\\
+&F_{2}=-c cos\gamma_{1}+b cos\beta_{1}-a cos\alpha_{1}\\
+&Z_{3}=b sin\beta_{1}+a sin\alpha_{1}\\
+&F_{3}=b cos\beta_{1}-a cos\alpha_{1}\\
+&Z_{4}=a sin\alpha_{1}\\
+&F_{4}=-a cos\alpha_{1}\\
+&Z_{5}=C^{*}\\
+&F_{5}=C^{**}
+\end{eqnarray*}
+
+$C_{i} , (i=1,2,3,4,5)$ is the weight;\ $C^{*},C^{**}$ are fixed constants ,and
+
+$$
+0<C_{3}<C_{4}<C_{1}<C_{5}<C_{2}<1 $$
+$$
+\sum\limits_{i=1}^5C_{i}=1
+$$
+
+Because that human spine is composed of 33 vertebrae, it includes 12 pieces of cervical vertebra, 7 pieces of thoracic vertebra, 5 pieces of lumbar vertebra, sacrum and coccyx which are totally 9 pieces. 所以我们近似认为So we think approximately that
+$$
+a:b:c:d=4:12:7:9
+$$
+
+%我们可以从图像（图五）上看出
+We can see from the image (figure 5) that
+
+\begin{eqnarray*}
+&\beta_{1}=\alpha_{2}\\
+&\beta_{2}=\gamma_{1}
+\end{eqnarray*}
+
+%然而，结合文献[][][]可知，坐姿状态下对于脊椎各部分间的夹角来说有
+However, combined with the literature [4] [5] [6], the posture condition for spine angle between each part is
+
+
+\begin{eqnarray*}
+\frac{85\times180}{\pi}\leq\alpha_{1}+\alpha_{2}\leq\pi\\
+\frac{103\times180}{\pi}\leq\beta_{1}+\beta_{2}\leq\pi\\
+\frac{94\times180}{\pi}\leq\gamma_{1}+\gamma_{2}\leq\frac{\pi}{2}
+\end{eqnarray*}
+
+又因为飞机经济舱的座椅靠背高度与座椅间距离有相互约束，如图六所示。
+Because the economy class seat backrest height and the distance between the seats there are mutual constraint, as shown in figure 6.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=1.2]{pictureeight.PNG}
+ \caption{Seats can be adjusted angle diagram }座椅可调整角度示意图
+\end{figure}
+
+%图中，$H$代表座椅高度，$L$表示座间距。依据[]知，飞机经济舱座椅高度及座间距有规定范围，但考虑飞机经济舱使用超薄座椅的初衷，我们考虑取座间距的规定的最小值，即$L=$ ，并根据人的一般身高统计数据[]选取$H=$.
+On the figure, $H $represents the height of chair, $L $said spacing. According to [7], the plane has a prescribed scope economy class seats height and spacing, but consider to use the purpose of the ultra-thin seat aircraft economy class, we considered the provisions of the spacing of the minimum value, namely the $L =81.3cm $, and according to the average height of statistical data and select $H = 65.5cm$[8].
+
+这样，我们便得到座椅允许调整的倾角
+By this way, we can get the seat backplate allows adjustment of Angle
+
+\begin{eqnarray*}
+\theta=\arcsin \frac{H}{L}
+\end{eqnarray*}
+
+则再通过图五可以得到
+So through figure 5, we can get
+\begin{eqnarray*}
+\frac{\pi}{2}\leq\beta_{2}+\gamma_{1}\leq\theta
+\end{eqnarray*}
+此外，有
+What$^{'}$s more, there are
+\begin{eqnarray*}
+Z_{1}<H
+\end{eqnarray*}
+
+%综上所述，我们可以得到非线性规划模型
+From what has been discussed above, we can get a nonlinear programming model
+
+\begin{eqnarray}
+&min=\sum\limits_{i=1}^5C_{i}Z_{i}+C_{i}F_{i}\\
+s.t.&\left\{\begin{array}{ll}
+&0<C_{3}<C_{4}<C_{1}<C_{5}<C_{2}<1 \\
+&\sum\limits_{i=1}^5C_{i}=1\\
+&a:b:c:d=4:12:7:9\\
+&\beta_{1}=\alpha_{2}\\
+&\beta_{2}=\gamma_{1}\\
+&\frac{85\times180}{\pi}\leq\alpha_{1}+\alpha_{2}\leq\pi\\
+&\frac{103\times180}{\pi}\leq\beta_{1}+\beta_{2}\leq\pi\\
+&\frac{94\times180}{\pi}\leq\gamma_{1}+\gamma_{2}\leq\frac{\pi}{2}\\
+&\frac{\pi}{2}\leq\beta_{2}+\gamma_{1}\leq\theta\\
+&Z_{1}<H
+\end{array}
+\right.
+\end{eqnarray}
+
+%将该模型用Lingo 14.0进行求解可得座椅靠背倾角在一定范围内变化时人的脊椎主要受力点所受压力达到最小值时脊椎各部分间的夹角（相邻两个受力点连线所得折线的各夹角），并通过
+To solve the model with Lingo 14.0 , which is available to seat backrest angle changes within a certain range that people pressure on the spinal main points reaching the minimum spine angle between each part (income line of the adjacent two points wired angle), and through
+
+$$
+A(0,a \cos\gamma_{2}+(b\sin(\frac{\pi}{2}-\gamma_{2})-c\cos\beta_{2}))
+$$
+$$
+B(d\sin\gamma_{2},b\sin(\frac{\pi}{2}-\alpha_{2})-c\cos{\beta_{2}})
+$$
+$$
+C(d\sin\gamma_{2}+c\sin\gamma_{1},b\sin(\frac{\pi}{2}-\alpha_{2}))
+$$
+$$
+D(d\sin\gamma_{2}+c\sin\gamma_{1}+b\sin\beta_{2},0)
+$$
+$$
+E(d sin\gamma_{2}+c sin\gamma_{1}+b sin\beta_{1}+a sin\alpha_{1},a cos\alpha_{1})
+$$
+%代入相应数据可求得在图五所示坐标系下的各受力点的坐标，结合高斯曲线拟合模型得到拟合曲线，然后对该曲线进行平滑及优化调整以保证在所求得受力点处，拟合所得曲线函数的二阶导数为零，即让拟合曲线的极值点尽量靠近所求受力点。这样便可以得到在相对较为放松的状态下人的脊椎曲线，进而得到座椅靠背曲线，见图七（右侧为座椅靠背面）。
+
+Getting into the corresponding data in figure 5 coordinate system can be obtained under various stress point coordinates, which is combined with gauss curve fitting model to get fitting curve, and then to adjust and optimize the curve smoothly to ensure the loading points which are obtained, the fitting of the curve function of the second derivative is zero, namely, let the extreme value point of the fitted curve close to prayer points. So that we can get in a relatively relaxed state of spinal curve, backrest curve is obtained, as shown in figure 7 (on the right side of the seat on the back).
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.37]{picturenine.PNG}
+\includegraphics[scale=0.4]{pictureten.PNG}
+ \caption{Seat backplate curve }座椅靠背曲线
+\end{figure}
+
+\newpage
+\section{Future Work}
+
+%由于非线性规划优化模型在选取脊椎受力点时太过粗糙，受力分析的过程也并不严谨，虽然利用反推思想并选用非线性规划解决问题的想法新颖，但误差较大。考虑到在科学技术迅猛发展的今天，利用压力传感技术动态监测获取大量较为精准的数据已非难事，但鉴于时间紧迫且技术和工具有限，我们并不能得到大量具体的真实数据，所以只给出了理论分析。在条件允许的状况下，我们可以进行后续的研究，通过压力传感技术得到大量不同坐姿下人坐在座椅上时座椅靠背接触面上产生的压力及其分布情况，并得到相关压力参数及可视化数据等。在静态及动态条件下，分析不同曲面造型靠背的体压分布指标与舒适度的关系。由于体压分布可以通过最大压力、平均压力、最大压力梯度、平均压力梯度、不对称系数、纵向压力分布曲线、纵向力矩分布曲线、舒适性系数来进行刻画，故其与舒适度之间存在着必然的关联，我们可以通过建立神经网络优化评价模型给出进一步评价判断。所以我们可以将后续研究方向放在这一部分，如果可以得到大量的数据，便能进行数据统计分析，结合本文所提出的非线性规划模型，并在基于时间序列法的理论基础上进行变换、分析，得到人体脊椎曲线随座椅靠背倾角变化而变化的规律。这一理念如果可以实现，则不仅可以用于设计否合人机工程学的各种座椅，还可以应用在生物医学方面，对人体脊椎随着坐姿的不同而产生的变化情况进行检测和预警，在人体脊椎出现问题之间给出警告以及相应的建议，这无疑是一项很有意义的工作。
+Due to the nonlinear programming optimization model selection in spinal stress point  that is too rough, force analysis process is not rigorous, although using backstepping principle and selected the novel ideas to solve the problem of nonlinear programming, but the error is bigger. Considering the rapid development of science and technology today, using the pressure sensor technology dynamic monitoring data is not too difficult to get a lot of more precise, but because of tight time and technology and limited tools , we can$^{'}$t get a large number of real data, so only the theoretical analysis is presented. Under the condition of conditions allow, we can undertake follow-up studies,.We get a lot of different posture inferior when sitting on the seat backrest contact surface pressure through the pressure sensor technology and its distribution, and get the related pressure parameters and data visualization etc. Under the condition of static and dynamic analysis of different surface modeling back of a chair body pressure distribution index and comfort. Because the body pressure distribution on maximum pressure, average pressure, maximum pressure gradient, average pressure gradient, asymmetric coefficient, the longitudinal pressure distribution curve, longitudinal moment distribution curve, comfort factor to depict[9], therefore the relevance with the comfort level between the inevitable, we can through the establishment of neural network optimization evaluation model give further evaluation. So we can further research direction on this part, if you can get a large amount of data, can perform data statistical analysis, combined with the nonlinear programming model of this paper, and based on the method of time series based on the theory of transformation, analysis, get the human body vertebra curve changes over backrest Angle. If this concept can be achieved, whether or not only can be used to design the man-machine engineering, the various seat can also be applied in the biological medicine, to the human body vertebra changes with the emergence of the posture of different detection and warning, problems of the human body vertebra between warning is given, and corresponding suggestions, this is a very meaningful work.
+
+\newpage
+\section{Advertising Material}
+
+
+Please pay your attention on this!
+%由于你们公司在飞机经济舱推行使用薄型座椅而导致你的乘客在减少吗，或者你的乘客在向你投诉吗？如果你的回答是肯定的，那么，你需要来关注一下这则广告了，因为这则广告的内容很有可能会改善你的现状哦！如果你的答案是否定的，那么你也需要来看一看了，不然小心在激烈的空间战中败下阵来！
+Due to your company in the economy class to implement using slimline seats and cause your passengers in reducing, or your passengers complain to you? If your answer is yes, then you need to pay attention to this advertising, because the content of this advertisement is likely to improve your situation! If your answer is no, then you also need to have a look at it, or be careful failed in the heat of the space war!
+
+这是显而易见的，随着人们生活水平的提高，飞机出行因其方便快捷成为了出行人士的首要选择，又由于经济舱价格合理比较适合广大普通工薪阶层，所以购买经济舱的机票的旅客成为了航空公司的主要客源。与此同时，经济全球化的发展也预示着国家与国家之间的联系越来越紧密、交流越来越多，这种现象导致在全球范围内的国际航班数目呈明显上升的趋势，乘坐国际航班人数快速增长。这些因素无疑对航空运输带来了商机却也带来了巨大的压力和挑战。由于一味地增加航班并不现实，所以大多数航空公司选择提高飞机的载客率来解决问题，但是又因为飞机机舱的空间大小有限，所以航空公司开始将目标转向飞机的座椅上。作为一个发展日益完善的运输服务行业，虽然看中收益问题但也不能忽视服务质量这一因素，盲目追求高收益是目光短浅的表现。就是因为考虑到这一点，许多航空公司选择尽量不减少每位乘客在经济舱的原有活动空间范围，而是将视线放在了减小座椅的厚度上，于是你们开始使用超薄座椅以达到在不明显影响乘客舒适度的前提下增加飞机载客量的目的，但是，在“人性化”一词盛行的今天，这样的改变必然会引起经济舱的乘客开始投诉和抱怨。或许他们会说，航空公司为牟取利益压榨他们这些普通工薪阶级的人，这时候，你们航空部要面临的不仅是客源的流失，更是广大人们的道德谴责。更为糟糕的是，这段时间飞机失事的事件频出，这就更加剧了你们的危机不是吗？一些人考虑到安全的因素而在出行时开始犹豫是否要选择乘坐飞机，如果加上你们航空公司的座椅并不舒适这一问题的话，那么这些犹豫不决的人中便会有相对之前来说较多的人选择放弃乘坐你们公司的飞机，那么在这场愈加激烈的空间战中你就必然要失败了！
+It is obvious, as people living standard rise, the plane because of its convenient and quick have become a travel personage$^{'}$s first choice, and because the economy class price is reasonable suit to the broad masses of ordinary working-class, so buy economy ticket passengers became the airline$^{'}$s main customers. At the same time, the development of economic globalization also indicates the state and the link between countries more and more closely, more and more communication, this phenomenon leads to the number of international flights around the world show clear rising trend, a rapid growth of the number of international flights. No doubt these factors to the air transport has brought business opportunities but also brought great pressure and challenge. Due to increasing blindly flights are not realistic, so most airlines choose to increase the load factor to solve the problem of the plane, but also because the plane cabin space is limited, so airlines will start towards the plane seat. As a transportation service industry for the development of increasingly perfect, although take a fancy to yield problems but also cannot ignore the service quality factors, the performance of the blind pursuit of high yield is short-sighted. Because with that in mind, many airlines choose as far as possible not to reduce the original scope of activity space per passenger in economy class, but the line of sight on the reducing the thickness of the seat, then you begin to use ultra-thin seat without significantly affect the comfort of the passengers in order to achieve the purpose of the premise to increase the capacity, however, in the age of the word $'$human$'$, this change will inevitably cause economy class passengers began to complain and complain. Maybe they will say, for profit squeeze their ordinary working-class people, at this time, what$^{'}$s your airline is not only a loss of customers, but also the broad masses of people$^{'}$s moral condemnation. To make matters worse, this paragraph of time of the plane crash event, it$^{'}$s more aggravated the crisis in the you isn$^{'}$t it? Some people consider the safety factor and began to hesitate whether to choose their flying, airline seats are not comfortable with you this problem, so these hesitate before people will have relatively more people choose to give up on your company$^{'}$s flight, so in the increasingly fierce space war you are bound to fail!
+那么，如何既保证收益又能提供较为舒适的服务呢？来看一下我们的设计你就会明白了！
+So, how to guarantee profits, as well as provide more comfortable service? Take a look at our design you will understand!
+
+我们的产品是通过将飞机经济舱的座椅实物及人类脊椎图像数字化建立数学模型先进行理论分析，后通过软件编程实现人工智能在虚拟网络空间进行多次设计检测，并且所有过程均是可视化的，你可以亲眼目睹一堆数值如何一步一步变为座椅实物的。但是由于资金和时间的限制，我们只是在理论基础上验证了这一想法的可实施性，但是不要失望，听完我的介绍，你会对它产生浓厚的兴趣也不一定哦！
+Our products are through the aircraft economy class seat physical and human spine image digital mathematical model is established through theoretical analysis first, after through software programming to realize the artificial intelligence in virtual network space design testing for many times, and all process is visual, you can see a pile of numerical how to step by step into the seat material. But as a result of the limitation of time and money, we just based on the theory is verified this idea can be sexually, but don$^{'}$t despair, after listening to my introduction, you will have strong interest in it does not necessarily!
+
+
+这种座椅是你们航空公司所正在使用或打算要投入使用的超薄座椅，但是关键点在于它比一般未进行改造的座椅要舒适的多。虽然座椅背面板很薄，填料很少，但座椅靠背曲线的设计很好地弥补了这一缺点，因为我们所设计的这种座椅靠背曲线可以贴合乘客在乘坐飞机时感觉最舒适的情况下的脊椎曲线，近似达到自然状态下的人体脊椎曲线，故如果在你们公司的飞机上使用我们所设计的这种座椅靠背，那么大多数乘客在坐在座椅上之后就可以感到达到了较舒适甚至是最舒适的坐姿，这种座椅与之前的座椅相比其靠背倾角可以调节的范围比较小，但却不影响这种座椅可以适用于大多数人。所以这种椅子的优势就在于它可以在解决舒适问题之外，还解决了飞机上经常出现的因为座椅靠背倾角过大影响到别人而出现的争论，所以，有眼光的你一定会发现我们的优势的！
+It is the seat of your airline is used or intended to be put into use which called the slimline seat , but the key point is that it is more comfortable compared with normal seats. Although the backplate is very thin, and it has less padding, but the design of curve of backplate will made up for the shortcomings, because we can design the backplate curve that can fit passengers feel more comfortable when flying under the condition of spinal curve, the approximate reach under the natural state of the human body vertebra curve, therefore, if the plane in your company to use our design by the backrest, so most of the passengers sat on a seat can feel reached a comfortable even after the most comfortable sitting position, before the seats and seat than the back of a chair can adjust the angle is small, but it doesn$^{'}$t affect the seat can be applied to most people. So the advantage of this kind of chair is that it can be to deal with the problem of comfortable, also addressed the plane often occurs because the backrest angle is too large to affect others in debate, so have eyes you will find our advantage!
+
+有兴趣的话快来联系我们吧，相信使用我们所设计的座椅的你们的公司一定会增加在这场空间战中打败别的公司的胜算的！
+If you are interested in it , please contact us, we believe that your company in the use of our seat design by will beat other companies with more chances!
+
+
+\newpage
+
+\begin{thebibliography}{99}
+%\addcontentsline{toc}{section}{References}
+\bibitem{1}Li Qingyang,\ Wang Nengchao,\ Yi Dayi.\ Numerical Analysis,the fifth edition \ Tsinghua university press\ 2008.12\ page 73$\sim$78.  
+\bibitem{2}Least squares method to solve the gauss function fitting and function.\ http://wenku.baidu.com/link?url=NSHteGhuLCxCqnbt2Jln4AQKVV5zlFUj34r
+    Yk6Nt9BMCMyG2-cgQPVYhkf6xTJW57iQ$\_$U0ieHRsAalgmiJmQxfd5fgchxZIqc
+    MR4K4Q1jgW.\  2015.11.29.
+\bibitem{3} Author: Lv Wangshu,\ tutor: Liu Yang.\ High speed railway passenger car seat optimization design research .\ Shenyang university of aeronautics and astronautics,\ Date:January 2014.
+ \bibitem{4}Roland Zemp, William R. Taylor, Silvio Lorenzetti.\ Are pressure measurements effective in the assessment of office chair comfort/discomfort? A review.\ Applied Ergonomics.\ Volume 48, May 2015, Pages 273–282
+ \bibitem{5} He Yongjun.\ Shanghai Aircraft Design and Research Institute，Shanghai 201210，China).\ Dynamic Character Analysis of Passenger Seat
+
+ \bibitem{6}  Steven M. Carconea, Peter J. Keirb.\ Effects of backrest design on biomechanics and comfort during seated work.\ Applied Ergonomics 38 (2007) 755–764
+\bibitem{7}Lu Jianxiong,\ Zhang Fuchang,\ Shen Limin.\ Sitting with the seat design of ergonomics .\ Nanjing forestry university.\ Article number: 1006-8309(2005)04-0044-03
+\bibitem{8} Civil aviation small knowledge series 120: airplane seats of learning .\ http://sky.news.sina.com.cn/2012-02-16/144612592.html.\ 2015.11.30.
+\bibitem{9}Xu Ming, Xia Qunsheng.\ Index of body pressure distribution .
+\end{thebibliography}
+
+
+
+\newpage
+\subsection*{Appendix}
+
+%====================附录导入程序代码=========================================
+
+\begin{verbatim}
+Program A:
+#include <iostream>
+#include <vector>
+#include <sstream>
+#include <fstream>
+#include <opencv2\opencv.hpp>
+
+using namespace std;
+using namespace cv;
+
+void loadImgPath(vector<string> & imgPath, string prefix,
+ int num = 1, string type = ".jpg")
+{
+	stringstream ss;
+	for (int i = 1; i <= num; i++)
+	{
+		ss << prefix << i << type;
+		string path;
+		ss >> path;
+		ss.clear();
+		imgPath.push_back(path);
+	}
+}
+struct MyPoint
+{
+	int x = 0, y = 0;
+};
+
+int main()
+{
+	vector<string> imgPath;
+	string prefix = "E:\\MathModel\\spineImg\\", type = ".jpg";
+	int num = 5;
+	loadImgPath(imgPath, prefix, num, type);
+	
+	cout << "Read Img!" << endl;
+	Mat spineImg = imread(imgPath[1], CV_LOAD_IMAGE_GRAYSCALE);
+	int row = spineImg.rows,
+		col = spineImg.cols,
+		channel = spineImg.channels(),
+		dis = row / 60,
+		cmp = *(spineImg.ptr<int>(1) + 1);
+	cout << "Row: " << row << "   Col: " << col << endl;
+	MyPoint result[37];
+	int count = 0;
+	cout << "Compare pix!\n";
+	cout << "cmp pix = " << cmp << endl;
+	for (int r = 0; r < row; r += dis)
+	{
+		int tempRow = r;
+		if (r == 0)
+			tempRow = dis / 2 + 1;
+		else if (r + dis >= row)
+			tempRow = row - dis / 2;
+		cout << "Comparing at row " << tempRow << endl;
+		int * rowPix = spineImg.ptr<int>(tempRow);
+		
+		for (int c = 0; c < col * 2 / 3; c++)
+		{
+			if (rowPix[c] != cmp)
+			{
+				cout << "record pix = " << rowPix[c] << endl;
+				result[count].y = row - tempRow;
+				result[count++].x = c;
+				break;
+			}
+		}
+		
+		cout << "data count: " << count << endl;
+	}
+	cout << "Writing file!" << endl;
+	ofstream fout,foutX,foutY;
+	fout.open("E:\\MathModel\\spineData\\spine1.txt", ios::out);
+	foutX.open("E:\\MathModel\\spineData\\spine1x.txt", ios::out);
+	foutY.open("E:\\MathModel\\spineData\\spine1y.txt", ios::out);
+	for (int i = 0; i < count; i++)
+	{
+		fout << result[i].x << " " << result[i].y << endl;
+		foutX << result[i].x << ",";
+		foutY << result[i].y << ",";
+	}
+	fout.close();
+	foutX.close();
+	foutY.close();
+	cout << "Done!" << endl;
+	return 0;
+}
+
+
+\end{verbatim}
+
+\newpage
+\begin{verbatim}
+
+
+Program B:
+%Load human spine data.
+spineX = ...
+    [2,0,2,2,2,1,2,2,2,2,3,4,5,7,9,10,11,12,14,15,16,17,16,17,16,17,16,
+     16,16,15,15,14,14,13,12,11,9,9,7,7,5,4,3,2,2,1,1,0,1,2,3,2,4,8,12,
+     16,22,24,22,22,15;2,0,2,2,2,2,2,0,2,2,4,4,6,6,8,10,12,12,14,15,16,
+     16,16,16,16,16,16,16,16,16,16,14,14,14,14,12,12,10,10,8,6,6,6,4,4,
+     4,4,5,4,4,6,6,8,11,14,20,24,26,26,24,20;14,13,10,11,10,10,10,10,10,
+     10,10,11,12,12,12,12,12,0,13,13,14,15,14,15,15,15,14,14,13,13,12,13,
+     12,5,10,9,9,6,5,4,3,2,0,0,0,1,0,2,4,7,5,4,6,14,17,17,18,18,18,16,15;
+    3,1,1,2,2,1,2,2,4,4,5,6,6,7,9,10,11,11,11,12,12,12,12,11,11,11,11,10,
+    8,10,6,7,6,7,6,5,4,4,2,0,0,0,0,0,0,0,0,1,1,2,4,4,5,9,10,12,20,24,28,
+    28,28;4,2,2,2,2,4,4,4,6,6,6,8,8,10,10,12,12,12,14,14,14,14,14,14,14,
+    13,12,12,10,10,8,8,6,6,4,4,2,2,2,0,2,0,2,2,2,4,4,4,6,6,10,12,12,14,
+    16,26,26,24,24,20,22];
+spineY = [779,773,760,747,734,721,708,695,682,669,656,643,630,617,604,
+591,578,565,552,539,526,513,500,487,474,461,448,435,422,409,396,383,
+370,357,344,331,318,305,263,279,266,253,240,227,214,201,188,175,162,
+149,136,123,110,97,84,71,58,45,32,19,6];
+
+%Move down the whole curve and let the lowest point fit the x-axis.
+Then move up the curve by 5 units.
+minX = min(spineX,[],2);
+tempX = spineX - repmat(minX,1,size(spineX,2)) + 5;
+%Compute the mean value of the 5 spine data in spineX.
+meanX = mean(tempX);
+
+%Fit a quartic polynomial
+[p4,s4] = polyfit(spineY,meanX,4);
+%Fit a sextic polynomial
+[p6,s6] = polyfit(spineY,meanX,6);
+x = linspace(0,800);
+%Bring the coefficient we got above into thoes two polynomials.
+polyCurve4 = p4(1)*(x.^4) + p4(2)*(x.^3) + p4(3)*(x.^2) + p4(4)*x + p4(5);
+polyCurve6 = p6(1)*(x.^6) + p6(2)*(x.^5) + p6(3)*(x.^4) + p6(4)*(x.^3) +
+               p6(5)*(x.^2) + p6(6)*x + p6(7);
+
+%Fit a Gaussian Function
+initGaussBeta = [28.6000,32,54.5070,19.8000,513,38.6827,18.2605,435,41.0454,
+15.4605,591,65.6288];
+gaussBetaFit = nlinfit(spineY,meanX,@Gaussian,initGaussBeta);
+ga1 = gaussBetaFit(1);
+gb1 = gaussBetaFit(2);
+gc1 = gaussBetaFit(3);
+ga2 = gaussBetaFit(4);
+gb2 = gaussBetaFit(5);
+gc2 = gaussBetaFit(6);
+ga3 = gaussBetaFit(7);
+gb3 = gaussBetaFit(8);
+gc3 = gaussBetaFit(9);
+ga4 = gaussBetaFit(10);
+gb4 = gaussBetaFit(11);
+gc4 = gaussBetaFit(12);
+%Bring the coefficient we got above into the Gaussian Function.
+gaussCurve = ga1*exp(-((x-gb1)/gc1).^2) + ga2*exp(-((x-gb2)/gc2).^2)
+               + ga3*exp(-((x-gb3)/gc3).^2) + ga4*exp(-((x-gb4)/gc4).^2);
+
+%Compute first derivative functions of the 3 fitting functions.
+syms x;
+g(x) = ga1*exp(-((x-gb1)/gc1)^2) + ga2*exp(-((x-gb2)/gc2)^2)
+          + ga3*exp(-((x-gb3)/gc3)^2) + ga4*exp(-((x-gb4)/gc4)^2);
+diffG(x) = diff(g(x));
+
+polyFour(x) = p4(1)*(x^4) + p4(2)*(x^3) + p4(3)*(x^2) + p4(4)*x + p4(5);
+diffPF(x) = diff(polyFour(x));
+
+polySix(x) = p6(1)*(x^6) + p6(2)*(x^5) + p6(3)*(x^4) + p6(4)*(x^3)
+               + p6(5)*(x^2) +p6(6)*x + p6(7);
+diffPS(x) = diff(polySix(x));
+
+%Compute extreme points of every fitting functions.
+x0 = real(double(solve(diffG(x))));
+x1 = real(double(solve(diffPF(x))));
+x2 = real(double(solve(diffPS(x))));
+
+%Compute 3 important angles of every curve.
+gdeg1 = radtodeg(atan(eval(diffG(49))))
+           - radtodeg(atan(eval(diffG(32))))
+               + 180;
+gdeg2 = radtodeg(atan(eval(diffG(179))))
+           - radtodeg(atan(eval(diffG(245))))
+               + 180;
+gdeg3 = radtodeg(atan(eval(diffG(518))))
+           - radtodeg(atan(eval(diffG(499))))
+               + 180;
+
+pfdeg1 = radtodeg(atan(eval(diffPF(133))))
+           - radtodeg(atan(eval(diffPF(257))))
+               + 180;
+pfdeg2 = radtodeg(atan(eval(diffPF(545))))
+           - radtodeg(atan(eval(diffPF(420))))
+               + 180;
+pfdeg3 = radtodeg(atan(eval(diffPF(720))))
+           - radtodeg(atan(eval(diffPF(898))))
+               + 180;
+
+psdeg1 = radtodeg(atan(eval(diffPS(31))))
+           - radtodeg(atan(eval(diffPS(-12))))
+               + 180;
+psdeg2 = radtodeg(atan(eval(diffPS(183))))
+           - radtodeg(atan(eval(diffPS(259))))
+               + 180;
+psdeg3 = radtodeg(atan(eval(diffPS(525))))
+            - radtodeg(atan(eval(diffPS(414))))
+               + 180;
+\end{verbatim}
+\end{spacing}
+    %\renewcommand{\thesection}{\Alph{chapter}.}
+\end{document}
+% ----- End of Document Body -----
