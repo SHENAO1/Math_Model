@@ -1,0 +1,6 @@
+使用方法：
+     1.将wanquanban.m保存好后点击run即可直接运行或直接将wanquanban中的程序copy到command window里。
+     2.此文档中形成了一个lvbo.m
+     这是一个滤波器函数，可方便的供以后调用
+      3.medianfun 为自编的中值滤波函数
+      4.gaussfiltcoef为高斯滤波的系数

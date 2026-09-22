@@ -1,0 +1,5 @@
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2005\Projects\GAD2\GAD2\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2005\Projects\GAD2\GAD2\bin\Debug\GAD2.exe
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2005\Projects\GAD2\GAD2\bin\Debug\GAD2.pdb
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2005\Projects\GAD2\GAD2\obj\Debug\GAD2.exe
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2005\Projects\GAD2\GAD2\obj\Debug\GAD2.pdb

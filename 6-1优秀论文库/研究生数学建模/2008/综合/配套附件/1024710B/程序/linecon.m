@@ -1,0 +1,33 @@
+function [xm1 fm1 xm2 fm2 phase]=linecon(paraz,l)
+global para;
+global Tst;
+paraz=paraz';
+x=zeros(5,3);
+l=[0 l];
+v=10;
+for i=1:3
+    [x(:,i) fval(i)]=fb4(paraz(:,i));
+end
+[Tst,pos]=max(x(5,:));
+Tb=Tst-x(5,:);
+
+xm1(1,:)=(x(1,:).*x(5,:)+Tb)./(Tb+x(5,:));
+for i=2:4
+    xm1(i,:)=(x(i,:).*x(5,:))./(Tb+x(5,:));
+end
+xm1(5,:)=Tb+x(5,:);
+fm1=zeros(1,3);
+for i=1:3
+    para=paraz(:,i);
+    fm1(i)=fbfun4(xm1(:,i));
+end
+
+for i=1:3
+    [xm2(:,i) fm2(i)]=fbt4(paraz(:,i));
+end
+ 
+for i=1:3
+delay1(i)=l(i)/v;
+delay2(i)=xm2(5,i)*(1-xm2(1,i))*paraz(1,i)/(paraz(3,i)-paraz(1,i));
+end
+phase=cumsum(delay1)-delay2+delay2(1);

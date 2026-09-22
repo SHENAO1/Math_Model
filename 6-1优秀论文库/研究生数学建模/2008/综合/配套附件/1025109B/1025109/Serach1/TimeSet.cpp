@@ -1,0 +1,27 @@
+// TimeSet.cpp: implementation of the CTimeSet class.
+//
+//////////////////////////////////////////////////////////////////////
+
+#include "stdafx.h"
+#include "Serach.h"
+#include "TimeSet.h"
+
+#ifdef _DEBUG
+#undef THIS_FILE
+static char THIS_FILE[]=__FILE__;
+#define new DEBUG_NEW
+#endif
+
+//////////////////////////////////////////////////////////////////////
+// Construction/Destruction
+//////////////////////////////////////////////////////////////////////
+
+CTimeSet::CTimeSet()
+{
+
+}
+
+CTimeSet::~CTimeSet()
+{
+
+}

@@ -1,0 +1,6 @@
+clc,clear
+[TT,YY]=ode45(@odefun1,0:0.01:0.2,[0.02  0]);
+plot(TT,YY(:,1),'r-*')
+xlabel('单位/s');ylabel('单位/m')
+title('小方砖竖放')
+

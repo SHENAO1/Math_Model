@@ -1,0 +1,283 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\Serach.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\Serach.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 Serach"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "Serach 1.0 版",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "版权所有 (C) 2008",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_SERACH_DIALOG DIALOGEX 0, 0, 385, 299
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Serach"
+FONT 9, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,259,212,50,14
+    PUSHBUTTON      "取消",IDCANCEL,259,230,50,14
+    EDITTEXT        IDC_EDIT1,12,59,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,53,59,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT3,94,59,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT4,137,59,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT5,179,59,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT6,220,59,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT7,263,59,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT8,307,59,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_T1,41,142,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_T2,87,142,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_T3,133,142,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_T4,177,142,40,14,ES_AUTOHSCROLL
+    LTEXT           "t1",IDC_STATIC,42,130,9,8
+    LTEXT           "t3",IDC_STATIC,135,130,9,8
+    LTEXT           "t4",IDC_STATIC,179,131,9,8
+    LTEXT           "t2",IDC_STATIC,89,130,9,8
+    LTEXT           "x1",IDC_STATIC,14,45,9,8
+    LTEXT           "x3",IDC_STATIC,108,47,9,8
+    LTEXT           "x4",IDC_STATIC,150,47,9,8
+    LTEXT           "x2",IDC_STATIC,57,47,9,8
+    LTEXT           "x5",IDC_STATIC,185,48,9,8
+    LTEXT           "x7",IDC_STATIC,276,47,9,8
+    LTEXT           "x8",IDC_STATIC,320,47,9,8
+    LTEXT           "x6",IDC_STATIC,232,48,9,8
+    EDITTEXT        IDC_EDIT_NUM,247,142,57,14,ES_AUTOHSCROLL
+    LTEXT           "滞留车辆数",IDC_STATIC,248,128,41,8
+    PUSHBUTTON      "开始",IDC_BUTTON_START,248,175,77,14
+    EDITTEXT        IDC_EDIT_11,10,100,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_12,54,100,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_13,96,100,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_14,138,100,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_15,180,100,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_16,222,100,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_17,264,100,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_18,308,100,40,14,ES_AUTOHSCROLL
+    LTEXT           "东左",IDC_STATIC,17,88,17,8
+    LTEXT           "南直",IDC_STATIC,98,88,17,8
+    LTEXT           "北直",IDC_STATIC,140,88,17,8
+    LTEXT           "西左",IDC_STATIC,58,88,17,8
+    LTEXT           "南左",IDC_STATIC,186,88,17,8
+    LTEXT           "东直",IDC_STATIC,270,88,17,8
+    LTEXT           "西直",IDC_STATIC,311,87,17,8
+    LTEXT           "北左",IDC_STATIC,225,88,17,8
+    PUSHBUTTON      "产生随机时间分布",IDC_BUTTON1,247,193,79,14
+    EDITTEXT        IDC_EDIT_TA1,41,170,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_TA2,87,170,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_TA3,133,170,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_TA4,177,170,40,14,ES_AUTOHSCROLL
+    LTEXT           "t1",IDC_STATIC,41,158,9,8
+    LTEXT           "t3",IDC_STATIC,135,158,9,8
+    LTEXT           "t4",IDC_STATIC,179,160,9,8
+    LTEXT           "t2",IDC_STATIC,89,158,9,8
+    EDITTEXT        IDC_EDIT_TB1,41,200,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_TB2,87,200,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_TB3,133,200,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_TB4,177,200,40,14,ES_AUTOHSCROLL
+    LTEXT           "t1",IDC_STATIC,42,188,9,8
+    LTEXT           "t3",IDC_STATIC,135,188,9,8
+    LTEXT           "t4",IDC_STATIC,179,189,9,8
+    LTEXT           "t2",IDC_STATIC,89,188,9,8
+    EDITTEXT        IDC_EDIT_TC1,41,228,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_TC2,87,228,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_TC3,133,228,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_TC4,177,228,40,14,ES_AUTOHSCROLL
+    LTEXT           "t1",IDC_STATIC,42,216,9,8
+    LTEXT           "t3",IDC_STATIC,135,216,9,8
+    LTEXT           "t4",IDC_STATIC,179,217,9,8
+    LTEXT           "t2",IDC_STATIC,89,216,9,8
+    EDITTEXT        IDC_EDIT_TD1,41,257,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_TD2,87,257,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_TD3,133,257,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_TD4,177,257,40,14,ES_AUTOHSCROLL
+    LTEXT           "t1",IDC_STATIC,41,245,9,8
+    LTEXT           "t3",IDC_STATIC,135,245,9,8
+    LTEXT           "t4",IDC_STATIC,179,247,9,8
+    LTEXT           "t2",IDC_STATIC,89,245,9,8
+    LTEXT           "网状模型",IDC_STATIC,14,17,73,8
+    PUSHBUTTON      "A1",IDC_BUTTON2,239,257,50,14
+    PUSHBUTTON      "A2",IDC_BUTTON3,297,256,50,14
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "Serach Microsoft 基础类应用程序\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "Serach\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2008\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "Serach.EXE\0"
+            VALUE "ProductName", "Serach 应用程序\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_SERACH_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 378
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 292
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 Serach(&A)..."
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\Serach.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

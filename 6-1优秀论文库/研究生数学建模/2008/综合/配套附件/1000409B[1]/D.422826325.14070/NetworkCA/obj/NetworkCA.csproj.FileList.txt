@@ -1,0 +1,8 @@
+bin\Debug\NetworkCA.exe
+bin\Debug\NetworkCA.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\NetworkCA.Form1.resources
+obj\Debug\NetworkCA.Properties.Resources.resources
+obj\Debug\NetworkCA.csproj.GenerateResource.Cache
+obj\Debug\NetworkCA.exe
+obj\Debug\NetworkCA.pdb
