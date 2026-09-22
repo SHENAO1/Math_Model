@@ -1,0 +1,8 @@
+直接运行main2函数即可.
+本函数中 对v*dm/m的建模 是如下形式：
+
+
+v*dm/m=（a0_x+a1_x*t）;
+xcoff
+ycoff
+zcoff   分别为x\y\z方向上多项式系数

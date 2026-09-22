@@ -1,0 +1,23 @@
+%求06号卫星观测00号飞行器的方向直线
+st6t=st6ot(:,1);
+st6otx=st6ot(:,2);
+st6oty=st6ot(:,3);
+st6otz=st6ot(:,4);%方向向量
+st6x=mea06lc(:,1);
+st6y=mea06lc(:,2);
+st6z=mea06lc(:,3);%卫星运行轨道坐标
+ln6a=st6oty./st6otx;
+ln6c=st6otz./st6otx;
+ln6b=st6y-ln6a.*st6x;
+ln6d=st6z-ln6c.*st6x;
+st6t=st6t';
+ln6a=ln6a';
+ln6b=ln6b';
+ln6c=ln6c';
+ln6d=ln6d';
+n=length(st6x);
+i=1:n;
+yy=[st6t(i);ln6a(i);ln6b(i);ln6c(i);ln6d(i)];
+fid=fopen('ln6.txt','w');
+fprintf(fid,'%2.16f %7.16f %7.16f %7.16f %7.16f\n',yy);
+fclose(fid);

@@ -1,0 +1,7 @@
+yy_0600_fa：06号卫星在meadata_09_00中的时刻(600个时刻)对应的alfa，beta值。
+
+satellite06_RK78：0s，1s，2s…时刻(86401个时刻)对应的06号卫星的x,y,z,vx,vy,vz
+satellite09_RK78：0s，1s，2s…时刻(86401个时刻)对应的09号卫星的x,y,z,vx,vy,vz
+
+satellite06_50_1812_170：06号卫星在meadata_09_00中的时刻(602个时刻)对应的x,y,z,vx,vy,vz
+satellite09_50_1812_170：09号卫星在meadata_09_00中的时刻(602个时刻)对应的x,y,z,vx,vy,vz

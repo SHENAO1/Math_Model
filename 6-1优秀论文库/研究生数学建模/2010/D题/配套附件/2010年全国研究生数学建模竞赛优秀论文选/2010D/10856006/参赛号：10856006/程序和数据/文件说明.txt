@@ -1,0 +1,5 @@
+文件T1.m为模型一的MATLAB程序；
+文件T2.m为模型二的MATLAB程序；
+文件T3.m为模型三的MATLAB程序；
+文件T4.m为模型四的MATLAB程序；
+文件matlab.mat为求解的赛题数据。

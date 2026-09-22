@@ -1,0 +1,11 @@
+
+第三问
+
+直接运行main(delta即为系统误差)
+
+运行theta9得dtheta9；
+运行theta6得dtheta6;
+
+xcoff
+ycoff
+zcoff   分别为x\y\z方向上多项式系数 (用到的2次近似)

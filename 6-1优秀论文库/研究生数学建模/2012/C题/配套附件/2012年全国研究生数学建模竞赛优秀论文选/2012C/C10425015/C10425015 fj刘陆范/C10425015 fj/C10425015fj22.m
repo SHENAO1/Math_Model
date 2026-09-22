@@ -1,0 +1,148 @@
+clc;clear;
+xx=[0.24,0.19,0.15,0.11,0.08,0.05,0.03,0.01,0.00,0,0.00,0.01,0.02,0.04,0.07,0.10,0.14,0.18,0.23,0.28,0.34,0.40,0.47,0.53,0.61,0.68,0.76,0.84,0.92,1.01,1.09,1.18,1.27,1.36,...
+    1.46,1.55,1.65,1.74,1.84,1.93,2.03,2.12,2.22,2.31,2.41,2.50,2.60,2.69,2.78,2.87,2.96,3.05,3.14,3.22,3.31,3.39,3.47,3.55,3.63,3.71,3.78,3.85,3.92,3.99,4.06,4.12,4.18,4.24,...
+    4.30,4.35,4.40,4.45,4.49,4.54,4.58,4.61,4.65,4.68,4.71,4.73,4.76,4.77,4.79,4.79,4.80,4.80,4.80,4.79,4.77,4.75,4.73,4.70,4.67,4.63,4.58,4.53,4.48,4.42,4.35,4.29,4.21,4.14,...
+    4.05,3.97,3.89,3.80,3.71,3.61,3.52,3.42,3.32,3.22,3.12,3.01,2.91,2.80,2.70,2.59,2.48,2.37,2.26,2.16,2.05,1.94,1.84,1.73,1.63,1.53,1.43,1.33,1.23,1.14,1.05,0.96,0.87,0.79,...
+    0.71,0.63,0.55,0.48,0.42,0.35,0.30];
+yy=[48.50,48.14,47.96,47.35,46.85,46.99,46.67,46.81,47.46,48.61,50.01,52.84,52.98,53.2,53.56,53.42,52.77,55.46,57.08,59.02,60.67,61.46,62.28,63.07,64.4,67.2,69.78,71.94,74.2,75.21,...
+    76.68,76.64,74.42,71.87,70.04,68.67,67.49,67.42,67.45,68.89,70.97,72.58,73.05,73.23,72.87,72.08,70.90,69.96,68.10,67.31,67.63,68.24,68.42,69.17,70.50,71.26,71.47,71.01,70.29,...
+    69.53,68.85,68.17,67.99,67.63,67.88,68.6,69.21,69.75,69.78,70.04,70.07,69.64,69.03,68.28,67.77,67.31,67.27,67.38,67.74,68.13,68.6,68.71,68.67,68.17,67.85,67.31,66.81,65.73,...
+    65.15,64.72,63.61,63.25,62.82,62.57,62.46,62.68,62.50,61.71,60.92,59.45,58.19,56.97,55.10,53.59,51.55,49.83,47.46,44.73,42.25,39.63,38.98,40.6,43.44,45.48,47.24,48.78,49.68,...
+    49.75,49.07,47.31,44.73,43.22,42.43,42.29,42.50,43.47,45.55,46.13,47.74,48.25,48.07,47.53,46.49,45.27,44.58,43.76,43.65,44.05,44.87,46.06,46.67,48.14,48.53];
+d2=[25/1000,22/1000,19/1000];%每一级抽油杆直径
+L2=[523.61,664.32,618.35];%每一级抽油杆长度
+rou=8456;%抽油杆密度
+roul=0.2*864+0.98*1000;;%地下原油密度
+wr2=9.8*pi*((d2(1)^2)*L2(1)+d2(2)^2*L2(2)+d2(3)^2*L2(3))*(rou-roul)/4/1000;%抽油杆重力
+D=(yy-wr2)*1000;
+u=xx;
+K=143;
+n=100;
+E=2.1*10^(11);%弹性模量
+a=(E/rou)^(0.5);%声音在钢中传播速度
+L11=L2(1);
+w=2*pi*4/60;
+d1=d2(1);
+for i=1:3
+    AA(i)=pi*(d2(i))^2/4;
+    x(i)=L2(i);
+end
+%傅里叶系数数值积分计算
+cgm=zeros(1,n);tao=zeros(1,n);gama=zeros(1,n);delta=zeros(1,n);
+cgm0=(2/K)*sum(D(1:K));
+gama0=(2/K)*sum(u(1:K));
+kei=zeros(1,n);miu=zeros(1,n);Ox=zeros(1,n);
+Px=zeros(1,n);Oxx=zeros(1,n);Pxx=zeros(1,n);
+afa=zeros(1,n);beita=zeros(1,n);
+   for i=1:n
+       for p=1:K
+            cgm(i)=cgm(i)+(2/K)*D(p)*cos(2*pi*i*p/K);
+            tao(i)=tao(i)+(2/K)*D(p)*sin(2*pi*i*p/K);
+            gama(i)=gama(i)+(2/K)*u(p)*cos(2*pi*i*p/K);
+            delta(i)=delta(i)+(2/K)*u(p)*sin(2*pi*i*p/K);
+       end
+   end
+  %%%%%%%%%%%%%%%%%以上计算四个傅里叶系数，下面计算阻尼系数%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%首先计算光杆功率和泵功率%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+nk=4.2;
+dd=44/1000;%泵径
+s=4.2;%光杆冲程
+Ap=pi*dd^2/4;%活塞面积
+F0=Ap*L11*roul*9.8;
+Kr=E*pi*d2(1)^2/4/L11;
+n0=15*a/L11;
+F0/s/Kr;
+nk/n0;
+wuyincixishu1=0.042;%查表3-57得到
+PRHP=wuyincixishu1*s*Kr*s*n/60;%单位瓦特
+%%%%%%%%%%%%计算泵功率%%%%%%%
+Wl=roul*9.8*L11*Ap;%柱塞截面积上的液柱载荷
+HP=Wl*s*n/60;%光杆功率，课本133经验公式，单位瓦特
+for i=1:3
+A(i)=pi*(d2(i)*100/30.48)^2/4;%抽油杆截面积，单位平方英尺
+end
+gamapie=4.42*10^(-2)*(L11*100/30.48)*(PRHP-HP)/735.5*(60/n)^2/((A(1)*x(1)+A(2)*x(2)+A(3)*x(3))*100/30.48)/(s*100/30.48)^2;
+c=pi*(a*100/30.48)*gamapie/2/(L11*100/30.48);%阻尼系数
+c=1.03;
+   for i=1:n
+       afa(i)=((i*w)/(a*2^0.5))*(1+(1+(c/(i*w))^2)^0.5)^0.5;
+        beita(i)=((i*w)/(a*2^0.5))*(-1+(1+(c/(i*w))^2)^0.5)^0.5; 
+   end
+   for kk=1:2
+       for i=1:n
+       kei(i)=(cgm(i)*afa(i)+tao(i)*beita(i))/...
+        (E*AA(kk)*(afa(i)^2+beita(i)^2)); 
+      miu(i)=(cgm(i)*beita(i)-tao(i)*afa(i))/...
+        (E*AA(kk)*(afa(i)^2+beita(i)^2));
+      Ox(i)=(kei(i)*cosh(beita(i)*x(kk))+delta(i)*...
+        sinh(beita(i)*x(kk)))*sin(afa(i)*x(kk))+...
+        (miu(i)*sinh(beita(i)*x(kk))+gama(i)*...
+        cosh(beita(i)*x(kk)))*cos(afa(i)*x(kk));
+      Px(i)=(kei(i)*sinh(beita(i)*x(kk))+delta(i)*...
+        cosh(beita(i)*x(kk)))*cos(afa(i)*x(kk))-...
+        (miu(i)*cosh(beita(i)*x(kk))+gama(i)*...
+        sinh(beita(i)*x(kk)))*sin(afa(i)*x(kk));
+      Oxx(i)=(tao(i)*sinh(beita(i)*x(kk))/(E*AA(kk))+...
+        (delta(i)*beita(i)-gama(i)*afa(i))*cosh(beita(i)*x(kk)))*...
+        sin(afa(i)*x(kk))+(cgm(i)*cosh(beita(i)*x(kk))/(E*AA(kk))+...
+        (gama(i)*beita(i)+delta(i)*afa(i))*sinh(beita(i)*x(kk)))*...
+        cos(afa(i)*x(kk));
+     Pxx(i)=(tao(i)*cosh(beita(i)*x(kk))/(E*AA(kk))+...
+        (delta(i)*beita(i)-gama(i)*afa(i))*sinh(beita(i)*x(kk)))*...
+        cos(afa(i)*x(kk))+(cgm(i)*sinh(beita(i)*x(kk))/(E*AA(kk))+...
+        (gama(i)*beita(i)+delta(i)*afa(i))*cosh(beita(i)*x(kk)))*...
+        sin(afa(i)*x(kk));
+       end
+      gama0=cgm0*x(kk)/(E*AA(kk))+gama0; 
+      gama=Ox;
+      delta=Px;
+      cgm0=cgm0;
+      cgm=E*AA(kk)*Oxx;
+      tao=E*AA(kk)*Pxx;
+   end
+       for i=1:n
+       kei(i)=(cgm(i)*afa(i)+tao(i)*beita(i))/...
+        (E*AA(3)*(afa(i)^2+beita(i)^2)); 
+      miu(i)=(cgm(i)*beita(i)-tao(i)*afa(i))/...
+        (E*AA(3)*(afa(i)^2+beita(i)^2));
+      Ox(i)=(kei(i)*cosh(beita(i)*x(3))+delta(i)*...
+        sinh(beita(i)*x(3)))*sin(afa(i)*x(3))+...
+        (miu(i)*sinh(beita(i)*x(3))+gama(i)*...
+        cosh(beita(i)*x(3)))*cos(afa(i)*x(3));
+      Px(i)=(kei(i)*sinh(beita(i)*x(3))+delta(i)*...
+        cosh(beita(i)*x(3)))*cos(afa(i)*x(3))-...
+        (miu(i)*cosh(beita(i)*x(3))+gama(i)*...
+        sinh(beita(i)*x(3)))*sin(afa(i)*x(3));
+      Oxx(i)=(tao(i)*sinh(beita(i)*x(3))/(E*AA(3))+...
+        (delta(i)*beita(i)-gama(i)*afa(i))*cosh(beita(i)*x(3)))*...
+        sin(afa(i)*x(3))+(cgm(i)*cosh(beita(i)*x(3))/(E*AA(3))+...
+        (gama(i)*beita(i)+delta(i)*afa(i))*sinh(beita(i)*x(3)))*...
+        cos(afa(i)*x(3));
+     Pxx(i)=(tao(i)*cosh(beita(i)*x(3))/(E*AA(3))+...
+        (delta(i)*beita(i)-gama(i)*afa(i))*sinh(beita(i)*x(3)))*...
+        cos(afa(i)*x(3))+(cgm(i)*sinh(beita(i)*x(3))/(E*AA(3))+...
+        (gama(i)*beita(i)+delta(i)*afa(i))*cosh(beita(i)*x(3)))*...
+        sin(afa(i)*x(3));
+       end   
+%计算位移函数和载荷函数
+nkk=143;%一个周期取的求位移和载荷的节点数，一般大于60
+t=0:60/4/(nkk-1):60/4;
+w=2*pi*4/60;%角速度
+fai3=w*t;
+u1=zeros(K,1);D1=zeros(K,1);
+for j=1:K
+    can1=0;can2=0;
+    for i=1:n
+        can1=can1+Ox(i)*cos(i*w*t(j))+Px(i)*sin(i*w*t(j));
+        can2=can2+Oxx(i)*cos(i*w*t(j))+Pxx(i)*sin(i*w*t(j));
+    end
+    U1(j)=(cgm0*x(3))/(2*E*AA(3))+gama0/2+can1;
+    F1(j)=(cgm0/2+E*AA(3)*can2)/1000;
+end
+plot(xx,yy,'r-')
+hold on
+plot(U1,F1,'b-')
+hold off
+title('三级杆')
+xlabel('每一点的位移/m');ylabel('载荷/KN');
+legend('地面示功图','泵功图');

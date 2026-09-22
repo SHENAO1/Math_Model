@@ -1,0 +1,8 @@
+
+运行main 
+本函数中 对v*dm/m的建模 是如下形式：
+v*dm/m=a0+a1*t+a2*t^2+a3*t^3
+
+xcoff
+ycoff
+zcoff   分别为x\y\z方向上多项式系数
