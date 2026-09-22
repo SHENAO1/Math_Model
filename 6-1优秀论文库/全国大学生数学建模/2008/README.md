@@ -1,0 +1,30 @@
+# 全国大学生数学建模 · 2008
+
+返回 [全国大学生数学建模](../README.md)
+
+包含论文、赛题及相关 PDF 文档。题号不明的文件放在“综合”；转换版保留 Word 原稿供对照。
+
+## 综合
+
+| 文档 | 页数 | 大小 |
+|---|---:|---:|
+| [08年A题.pdf](%E7%BB%BC%E5%90%88/08%E5%B9%B4A%E9%A2%98.pdf) | 2 | 0.1 MB |
+| [08年B题.pdf](%E7%BB%BC%E5%90%88/08%E5%B9%B4B%E9%A2%98.pdf) | 1 | 0.1 MB |
+| [2008年大学生数学建模竞赛A题优秀论文（1）.pdf](%E7%BB%BC%E5%90%88/2008%E5%B9%B4%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E7%AB%9E%E8%B5%9BA%E9%A2%98%E4%BC%98%E7%A7%80%E8%AE%BA%E6%96%87%EF%BC%881%EF%BC%89.pdf) | 39 | 0.4 MB |
+| [2008年大学生数学建模竞赛A题优秀论文（2）.pdf](%E7%BB%BC%E5%90%88/2008%E5%B9%B4%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E7%AB%9E%E8%B5%9BA%E9%A2%98%E4%BC%98%E7%A7%80%E8%AE%BA%E6%96%87%EF%BC%882%EF%BC%89.pdf) | 11 | 1.8 MB |
+| [2008年大学生数学建模竞赛B题优秀论文（2）.PDF](%E7%BB%BC%E5%90%88/2008%E5%B9%B4%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E7%AB%9E%E8%B5%9BB%E9%A2%98%E4%BC%98%E7%A7%80%E8%AE%BA%E6%96%87%EF%BC%882%EF%BC%89.pdf) | 28 | 1.0 MB |
+| [2008年大学生数学建模竞赛B题优秀论文（3）.PDF](%E7%BB%BC%E5%90%88/2008%E5%B9%B4%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E7%AB%9E%E8%B5%9BB%E9%A2%98%E4%BC%98%E7%A7%80%E8%AE%BA%E6%96%87%EF%BC%883%EF%BC%89.pdf) | 16 | 0.5 MB |
+| [2008高教社数码相机（Word转PDF）.pdf](%E7%BB%BC%E5%90%88/2008%E9%AB%98%E6%95%99%E7%A4%BE%E6%95%B0%E7%A0%81%E7%9B%B8%E6%9C%BA%EF%BC%88Word%E8%BD%ACPDF%EF%BC%89.pdf) | 27 | 1.1 MB |
+| [(2008国赛A题特等奖)北京航空航天大学-数码相机定位.pdf](%E7%BB%BC%E5%90%88/%5B2008%E5%9B%BD%E8%B5%9BA%E9%A2%98%E7%89%B9%E7%AD%89%E5%A5%96%5D%E5%8C%97%E4%BA%AC%E8%88%AA%E7%A9%BA%E8%88%AA%E5%A4%A9%E5%A4%A7%E5%AD%A6-%E6%95%B0%E7%A0%81%E7%9B%B8%E6%9C%BA%E5%AE%9A%E4%BD%8D.pdf) | 11 | 1.9 MB |
+| [B长沙理工大学 高等教育收费.pdf](%E7%BB%BC%E5%90%88/B%E9%95%BF%E6%B2%99%E7%90%86%E5%B7%A5%E5%A4%A7%E5%AD%A6%20%E9%AB%98%E7%AD%89%E6%95%99%E8%82%B2%E6%94%B6%E8%B4%B9.pdf) | 24 | 0.2 MB |
+| [cumcm0801(1).pdf](%E7%BB%BC%E5%90%88/cumcm0801%5B1%5D.pdf) | 17 | 0.4 MB |
+| [cumcm0803(1).pdf](%E7%BB%BC%E5%90%88/cumcm0803%5B1%5D.pdf) | 13 | 0.2 MB |
+| [cumcm0811(1).pdf](%E7%BB%BC%E5%90%88/cumcm0811%5B1%5D.pdf) | 30 | 1.0 MB |
+| [cumcm0812(1).pdf](%E7%BB%BC%E5%90%88/cumcm0812%5B1%5D.pdf) | 19 | 0.6 MB |
+| [cumcm0815(1).pdf](%E7%BB%BC%E5%90%88/cumcm0815%5B1%5D.pdf) | 18 | 0.3 MB |
+| [cumcm0816(1).pdf](%E7%BB%BC%E5%90%88/cumcm0816%5B1%5D.pdf) | 20 | 0.5 MB |
+| [数码相机定位.pdf](%E7%BB%BC%E5%90%88/%E6%95%B0%E7%A0%81%E7%9B%B8%E6%9C%BA%E5%AE%9A%E4%BD%8D.pdf) | 29 | 0.3 MB |
+| [高校学费合理性研究.PDF](%E7%BB%BC%E5%90%88/%E9%AB%98%E6%A0%A1%E5%AD%A6%E8%B4%B9%E5%90%88%E7%90%86%E6%80%A7%E7%A0%94%E7%A9%B6.pdf) | 26 | 0.3 MB |
+| [高校教育学费标准问题的研究.pdf](%E7%BB%BC%E5%90%88/%E9%AB%98%E6%A0%A1%E6%95%99%E8%82%B2%E5%AD%A6%E8%B4%B9%E6%A0%87%E5%87%86%E9%97%AE%E9%A2%98%E7%9A%84%E7%A0%94%E7%A9%B6.pdf) | 24 | 0.4 MB |
+| [高等教育.pdf](%E7%BB%BC%E5%90%88/%E9%AB%98%E7%AD%89%E6%95%99%E8%82%B2.pdf) | 24 | 0.5 MB |
+| [高等教育学费标准的探讨.pdf](%E7%BB%BC%E5%90%88/%E9%AB%98%E7%AD%89%E6%95%99%E8%82%B2%E5%AD%A6%E8%B4%B9%E6%A0%87%E5%87%86%E7%9A%84%E6%8E%A2%E8%AE%A8.pdf) | 41 | 0.6 MB |

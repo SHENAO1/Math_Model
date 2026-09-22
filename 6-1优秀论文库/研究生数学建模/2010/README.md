@@ -1,0 +1,68 @@
+# 研究生数学建模 · 2010
+
+返回 [研究生数学建模](../README.md)
+
+包含论文、赛题及相关 PDF 文档。题号不明的文件放在“综合”；转换版保留 Word 原稿供对照。
+
+## A题
+
+| 文档 | 页数 | 大小 |
+|---|---:|---:|
+| [10145008(A题).pdf](A%E9%A2%98/10145008%28A%E9%A2%98%29.pdf) | 41 | 1.7 MB |
+| [10286037_A题.pdf](A%E9%A2%98/10286037_A%E9%A2%98.pdf) | 36 | 1.5 MB |
+| [10291006(A题).pdf](A%E9%A2%98/10291006%28A%E9%A2%98%29.pdf) | 24 | 1.1 MB |
+| [10613001(A题).pdf](A%E9%A2%98/10613001%28A%E9%A2%98%29.pdf) | 32 | 1.2 MB |
+| [2010年A题.pdf](A%E9%A2%98/2010%E5%B9%B4A%E9%A2%98.pdf) | 20 | 1.6 MB |
+| [利用BP神经网络分类预测代码（Word转PDF）.pdf](A%E9%A2%98/%E5%88%A9%E7%94%A8BP%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%88%86%E7%B1%BB%E9%A2%84%E6%B5%8B%E4%BB%A3%E7%A0%81%EF%BC%88Word%E8%BD%ACPDF%EF%BC%89.pdf) | 1 | 0.0 MB |
+| [基于神经网络MIV值分析的肿瘤信息基因提取.pdf](A%E9%A2%98/%E5%9F%BA%E4%BA%8E%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9CMIV%E5%80%BC%E5%88%86%E6%9E%90%E7%9A%84%E8%82%BF%E7%98%A4%E4%BF%A1%E6%81%AF%E5%9F%BA%E5%9B%A0%E6%8F%90%E5%8F%96.pdf) | 34 | 1.9 MB |
+| [数模论文041.pdf](A%E9%A2%98/%E6%95%B0%E6%A8%A1%E8%AE%BA%E6%96%87041.pdf) | 29 | 1.6 MB |
+| [第二问MIV值筛选特征基因集（Word转PDF）.pdf](A%E9%A2%98/%E7%AC%AC%E4%BA%8C%E9%97%AEMIV%E5%80%BC%E7%AD%9B%E9%80%89%E7%89%B9%E5%BE%81%E5%9F%BA%E5%9B%A0%E9%9B%86%EF%BC%88Word%E8%BD%ACPDF%EF%BC%89.pdf) | 2 | 0.1 MB |
+| [论文_A题_k00000151_-HK(Last_version)2.pdf](A%E9%A2%98/%E8%AE%BA%E6%96%87_A%E9%A2%98_k00000151_-HK%28Last_version%292.pdf) | 6 | 0.5 MB |
+
+## B题
+
+| 文档 | 页数 | 大小 |
+|---|---:|---:|
+| [10291003B.pdf](B%E9%A2%98/10291003B.pdf) | 36 | 1.4 MB |
+| [10407002.pdf](B%E9%A2%98/10407002.pdf) | 33 | 1.6 MB |
+| [10561008B.pdf](B%E9%A2%98/10561008B.pdf) | 7 | 0.8 MB |
+| [2010年研究生数学建模论文.pdf](B%E9%A2%98/2010%E5%B9%B4%E7%A0%94%E7%A9%B6%E7%94%9F%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E8%AE%BA%E6%96%87.pdf) | 15 | 0.8 MB |
+| [2010研究生B题（Word转PDF）.pdf](B%E9%A2%98/2010%E7%A0%94%E7%A9%B6%E7%94%9FB%E9%A2%98%EF%BC%88Word%E8%BD%ACPDF%EF%BC%89.pdf) | 5 | 0.5 MB |
+| [各部件的体积受力面积等数据（Word转PDF）.pdf](B%E9%A2%98/%E5%90%84%E9%83%A8%E4%BB%B6%E7%9A%84%E4%BD%93%E7%A7%AF%E5%8F%97%E5%8A%9B%E9%9D%A2%E7%A7%AF%E7%AD%89%E6%95%B0%E6%8D%AE%EF%BC%88Word%E8%BD%ACPDF%EF%BC%89.pdf) | 2 | 0.2 MB |
+| [吉林大学数学建模-B题.pdf](B%E9%A2%98/%E5%90%89%E6%9E%97%E5%A4%A7%E5%AD%A6%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1-B%E9%A2%98.pdf) | 14 | 0.6 MB |
+| [封面（Word转PDF）.pdf](B%E9%A2%98/%E5%B0%81%E9%9D%A2%EF%BC%88Word%E8%BD%ACPDF%EF%BC%89.pdf) | 1 | 0.2 MB |
+| [探讨重物落水后运动过程的数学模型.pdf](B%E9%A2%98/%E6%8E%A2%E8%AE%A8%E9%87%8D%E7%89%A9%E8%90%BD%E6%B0%B4%E5%90%8E%E8%BF%90%E5%8A%A8%E8%BF%87%E7%A8%8B%E7%9A%84%E6%95%B0%E5%AD%A6%E6%A8%A1%E5%9E%8B.pdf) | 24 | 1.1 MB |
+| [数学建模论文_电子版.pdf](B%E9%A2%98/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E8%AE%BA%E6%96%87_%E7%94%B5%E5%AD%90%E7%89%88.pdf) | 36 | 1.4 MB |
+| [论文（终）.pdf](B%E9%A2%98/%E8%AE%BA%E6%96%87%EF%BC%88%E7%BB%88%EF%BC%89.pdf) | 30 | 1.3 MB |
+| [附件1：流动的力学相似资料一（Word转PDF）.pdf](B%E9%A2%98/%E9%99%84%E4%BB%B61%EF%BC%9A%E6%B5%81%E5%8A%A8%E7%9A%84%E5%8A%9B%E5%AD%A6%E7%9B%B8%E4%BC%BC%E8%B5%84%E6%96%99%E4%B8%80%EF%BC%88Word%E8%BD%ACPDF%EF%BC%89.pdf) | 8 | 0.3 MB |
+| [附件2：流动的力学相似资料二（Word转PDF）.pdf](B%E9%A2%98/%E9%99%84%E4%BB%B62%EF%BC%9A%E6%B5%81%E5%8A%A8%E7%9A%84%E5%8A%9B%E5%AD%A6%E7%9B%B8%E4%BC%BC%E8%B5%84%E6%96%99%E4%BA%8C%EF%BC%88Word%E8%BD%ACPDF%EF%BC%89.pdf) | 10 | 0.3 MB |
+| [附录A 问题3部分化简过程（Word转PDF）.pdf](B%E9%A2%98/%E9%99%84%E5%BD%95A%20%E9%97%AE%E9%A2%983%E9%83%A8%E5%88%86%E5%8C%96%E7%AE%80%E8%BF%87%E7%A8%8B%EF%BC%88Word%E8%BD%ACPDF%EF%BC%89.pdf) | 2 | 0.6 MB |
+| [附录B 程序清单（Word转PDF）.pdf](B%E9%A2%98/%E9%99%84%E5%BD%95B%20%E7%A8%8B%E5%BA%8F%E6%B8%85%E5%8D%95%EF%BC%88Word%E8%BD%ACPDF%EF%BC%89.pdf) | 56 | 0.8 MB |
+
+## C题
+
+| 文档 | 页数 | 大小 |
+|---|---:|---:|
+| [10386017C.pdf](C%E9%A2%98/10386017C.pdf) | 19 | 1.0 MB |
+| [10422016.pdf](C%E9%A2%98/10422016.pdf) | 46 | 4.9 MB |
+| [10491004C.pdf](C%E9%A2%98/10491004C.pdf) | 33 | 1.9 MB |
+| [10749007C.pdf](C%E9%A2%98/10749007C.pdf) | 15 | 1.7 MB |
+| [2010研究生数学建模-10248012.pdf](C%E9%A2%98/2010%E7%A0%94%E7%A9%B6%E7%94%9F%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1-10248012.pdf) | 38 | 2.1 MB |
+| [90068006C.pdf](C%E9%A2%98/90068006C.pdf) | 29 | 1.9 MB |
+| [C-90002064-国防科技大学-江荣,刘强,刘权.pdf](C%E9%A2%98/C-90002064-%E5%9B%BD%E9%98%B2%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6-%E6%B1%9F%E8%8D%A3%2C%E5%88%98%E5%BC%BA%2C%E5%88%98%E6%9D%83.pdf) | 21 | 1.3 MB |
+| [神经元的形态分类和识别(10701001).pdf](C%E9%A2%98/%E7%A5%9E%E7%BB%8F%E5%85%83%E7%9A%84%E5%BD%A2%E6%80%81%E5%88%86%E7%B1%BB%E5%92%8C%E8%AF%86%E5%88%AB%2810701001%29.pdf) | 25 | 1.1 MB |
+
+## D题
+
+| 文档 | 页数 | 大小 |
+|---|---:|---:|
+| [10054039.pdf](D%E9%A2%98/10054039.pdf) | 49 | 2.3 MB |
+| [10359003-D.pdf](D%E9%A2%98/10359003-D.pdf) | 23 | 1.2 MB |
+| [2010年建模论文 10247038 D题.pdf](D%E9%A2%98/2010%E5%B9%B4%E5%BB%BA%E6%A8%A1%E8%AE%BA%E6%96%87%2010247038%20D%E9%A2%98.pdf) | 24 | 1.2 MB |
+| [90068005.pdf](D%E9%A2%98/90068005.pdf) | 23 | 1.0 MB |
+| [使用说明（Word转PDF）.pdf](D%E9%A2%98/%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%EF%BC%88Word%E8%BD%ACPDF%EF%BC%89.pdf) | 3 | 0.2 MB |
+| [封面（Word转PDF）.pdf](D%E9%A2%98/%E5%B0%81%E9%9D%A2%EF%BC%88Word%E8%BD%ACPDF%EF%BC%89.pdf) | 1 | 0.1 MB |
+| [数模论文终版.pdf](D%E9%A2%98/%E6%95%B0%E6%A8%A1%E8%AE%BA%E6%96%87%E7%BB%88%E7%89%88.pdf) | 22 | 1.0 MB |
+| [特殊工件磨削加工的数学建模.pdf](D%E9%A2%98/%E7%89%B9%E6%AE%8A%E5%B7%A5%E4%BB%B6%E7%A3%A8%E5%89%8A%E5%8A%A0%E5%B7%A5%E7%9A%84%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1.pdf) | 44 | 1.7 MB |
+| [磨削加工具有复杂母线的旋转体的微分模型.pdf](D%E9%A2%98/%E7%A3%A8%E5%89%8A%E5%8A%A0%E5%B7%A5%E5%85%B7%E6%9C%89%E5%A4%8D%E6%9D%82%E6%AF%8D%E7%BA%BF%E7%9A%84%E6%97%8B%E8%BD%AC%E4%BD%93%E7%9A%84%E5%BE%AE%E5%88%86%E6%A8%A1%E5%9E%8B.pdf) | 26 | 1.4 MB |
+| [论文（终稿）.pdf](D%E9%A2%98/%E8%AE%BA%E6%96%87%EF%BC%88%E7%BB%88%E7%A8%BF%EF%BC%89.pdf) | 27 | 2.2 MB |

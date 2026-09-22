@@ -1,0 +1,16 @@
+# MathorCup
+
+返回 [总目录](../README.md)
+
+| 年份或届次 | PDF 数 |
+|---|---:|
+| [2012](2012/README.md) | 18 |
+| [2013](2013/README.md) | 14 |
+| [2014](2014/README.md) | 6 |
+| [2018](2018/README.md) | 11 |
+| [2019](2019/README.md) | 8 |
+| [第一届（年份待核实）](%E7%AC%AC%E4%B8%80%E5%B1%8A%EF%BC%88%E5%B9%B4%E4%BB%BD%E5%BE%85%E6%A0%B8%E5%AE%9E%EF%BC%89/README.md) | 9 |
+| [第三届（年份待核实）](%E7%AC%AC%E4%B8%89%E5%B1%8A%EF%BC%88%E5%B9%B4%E4%BB%BD%E5%BE%85%E6%A0%B8%E5%AE%9E%EF%BC%89/README.md) | 9 |
+| [第五届（年份待核实）](%E7%AC%AC%E4%BA%94%E5%B1%8A%EF%BC%88%E5%B9%B4%E4%BB%BD%E5%BE%85%E6%A0%B8%E5%AE%9E%EF%BC%89/README.md) | 15 |
+| [第六届（年份待核实）](%E7%AC%AC%E5%85%AD%E5%B1%8A%EF%BC%88%E5%B9%B4%E4%BB%BD%E5%BE%85%E6%A0%B8%E5%AE%9E%EF%BC%89/README.md) | 20 |
+| [第四届（年份待核实）](%E7%AC%AC%E5%9B%9B%E5%B1%8A%EF%BC%88%E5%B9%B4%E4%BB%BD%E5%BE%85%E6%A0%B8%E5%AE%9E%EF%BC%89/README.md) | 65 |
